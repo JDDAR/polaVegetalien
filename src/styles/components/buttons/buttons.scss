@@ -1,0 +1,20 @@
+@use '../../variables' as v;
+
+@mixin buttonPrimary{
+ 
+  text-decoration: none;
+  background: v.$color-primary;
+  border-radius: 6px;
+  color: v.$color-BG-primary;
+  text-align: center;  
+
+
+
+}
+
+@mixin buttonSecondary {
+  text-decoration: none;
+  color: v.$color-primary;
+}
+
+

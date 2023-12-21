@@ -1,0 +1,27 @@
+@use '../../variables' as v;
+
+
+.buttonProducts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  button{
+    cursor: pointer;
+    border: none;
+    padding: 10px 35px;
+    &:visited{
+      background: red;
+    }
+  }
+  .active {
+    background: red;
+  }
+}
+@media (max-width: 720px){
+  .buttonProducts {
+    flex-wrap: wrap;
+  }
+}
+

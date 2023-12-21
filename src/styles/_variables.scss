@@ -1,0 +1,44 @@
+@use 'fonts' as f;
+
+//fonts
+
+$font-family:'Stoke', serif; 
+$font-family-text:'Spectral', serif; 
+
+//colors 
+
+$color-primary: #FFB5BF ;
+$color-font-primary: #1d1d1d;
+$color-BG-primary:#fff;
+
+
+//Modals 
+
+$color-BG-modals: rgba(0, 0, 0, 0.49);
+$color-BG-hover-menu: rgba(255,255,255, 0.50);
+
+
+//sombras 
+
+$box-shadow: rgba(17, 17, 26, 0.05) 0px 2px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+$box-shadow-products: rgba(17, 17, 26, 0.05) 0px 2px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px ; 
+
+
+
+//Container General 
+.container {
+  width: 60%;
+  margin: auto;
+}
+body {
+  background-image: url(../assets/img/MarcaAgua.png);
+  background-size: cover;
+  font-family: $font-family;
+}
+
+
+@media (max-width: 1280px){
+  .container{
+    width: 90%;
+  }
+}

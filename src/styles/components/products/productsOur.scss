@@ -1,0 +1,54 @@
+@use '../../variables' as v;
+@use '../../components/buttons/buttons.scss' as b;
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  transition: 0.6s ease-in-out;
+  padding-block: 15px;
+  &:hover{
+    border: none;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: v.$box-shadow-products; 
+    padding: 15px;
+  }
+
+  &__product-img{
+    height: 150px;
+    border-radius: 6px;
+    box-shadow: v.$box-shadow;
+    img {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  }
+
+  &__product-info {
+    display: flex;
+    flex-direction: column;
+    font-family: v.$font-family-text;
+    h2 {
+      color: v.$color-font-primary;
+      font-size: 18px;
+    }
+    span {
+      font-size: 12px;
+      font-weight: 200;
+    }
+
+  }
+  &__product-price{
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-size: 18px;
+    }
+    a {
+      @include b.buttonSecondary();
+    }
+  }
+}

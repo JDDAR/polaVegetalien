@@ -1,0 +1,37 @@
+@use '../../variables' as v;
+
+.ourWorkContainer {
+  height: auto;
+  margin-bottom: 150px;
+  position: relative;
+
+  &__productsOur { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+  }
+  &__productsOur {
+
+    padding: 65px 0px;
+  }
+}
+
+@media(max-width: 1280px){ 
+
+  .ourWorkContainer {
+    &__productsOur{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+
+@media(max-width: 800px){ 
+
+  .ourWorkContainer {
+    &__productsOur{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+}

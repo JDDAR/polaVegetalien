@@ -1,0 +1,111 @@
+@use '../../variables' as v ; 
+
+
+.ourWorkSpaceContainer {
+  width: 100%;
+  &__container-info {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 65px;
+ }
+
+  &__img-our {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 65px 0;
+    
+    .img_0102{
+      height: 20%;
+      display: flex;
+      gap: 25px;
+      .img1 {
+        width: 60%;
+      }
+      .img2 {
+        width: 40%;
+      }
+      img {
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      
+        box-shadow: v.$box-shadow;
+      }
+    }
+    .img_03 {
+      height: 80%;
+      display: flex;
+
+      .img3 {
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+
+        box-shadow: v.$box-shadow;
+      }
+    }
+  }
+  &__info-our{
+    width: 100%;
+    padding: 65px 0;
+    position: relative;
+
+    .infoText {
+      position: absolute;
+      bottom: 150px;
+    }
+  }
+}
+
+@media (max-width: 800px ) {
+  .ourWorkSpaceContainer{
+    margin-bottom: 65px;
+    &__container-info{
+      height: auto;
+    }
+    &__info {
+      height: auto;
+      flex-direction: column;
+    }
+    &__img-our{
+      width: 30%;
+      .img_0102 {
+        flex-direction: column;
+        position: absolute;
+        transition: 0.6s ease-in-out;
+        left: -50px;
+
+        .img1 {
+          display: none;
+        }
+        .img1, .img2{
+          width: 40%;
+        }
+      }
+      .img_03 {
+        display: none;
+      }
+    }
+
+    &__info-our{
+      width: 60%;
+      .infoText{
+        position: relative;
+        top: 50px;
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,50 @@
+@use '../../variables' as v;
+@use '../../components/buttons/buttons.scss' as b;
+
+.buttonModal {
+  position: relative;
+  z-index: 2;
+  .menuModal {
+    cursor: pointer;
+    box-shadow: v.$box-shadow;
+    position: fixed;
+    top: 55px;
+    right: 200px;
+    border: none;
+    @include b.buttonPrimary();
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .buttonModal {
+    .menuModal{
+      right: 100px;
+    } 
+  }
+}
+
+@media (max-width: 1080px){
+  .buttonModal{
+    .menuModal{
+      right: 50px;
+    }
+  }
+}
+
+@media (max-width: 920px){
+  .buttonModal{
+    .menuModal{
+      top: 30px;
+      padding: 8px 25px;
+    }
+  }
+}
+
+@media (max-width: 380px){
+  .buttonModal{
+    .menuModal{
+      right: 25px;
+    }
+  }
+}

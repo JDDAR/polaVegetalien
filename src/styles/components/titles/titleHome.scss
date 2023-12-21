@@ -1,0 +1,30 @@
+@use '../../variables' as v;
+
+.titleHome {
+
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  gap: 15px;
+  color: v.$color-font-primary;
+  border-bottom: 0.5px solid v.$color-primary;
+  margin-bottom: 65px;
+
+  h2 {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  span {
+    font-family: v.$font-family-text;
+    font-weight: 200;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+}
