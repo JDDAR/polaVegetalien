@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import MainHome from "./components/mainHome"
 import MenuSpecific from "./components/menuSpecific/menuSpecific";
 import ModalMenu from "./components/modals/modalMenu"
+import NoMath from "./components/noMatches/NoMatch";
 
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
       {isOpen && <ModalMenu />}
       <Routes>
         <Route>
-          <Route path="/" element = { <MainHome /> } />
-          <Route path="menu/:menuSpecific" element={ <MenuSpecific />} />
+          <Route path="/Vegetalien" element = { <MainHome /> } />
+          <Route path="/vegetalien/menu/:menuSpecific" element={ <MenuSpecific />} />
+          <Route path="*" element={<NoMath />} />
         </Route>
     </Routes>
     </>

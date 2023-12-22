@@ -33,7 +33,7 @@ const ModalMenu = () => {
             }
           </div>
           <div className="menuHover">
-            <NavLink to="/menu/macarons" className="buttonMenuModal"> Saber mas</NavLink>
+            <NavLink to="/Vegetalien/menu/macarons" className="buttonMenuModal"> Saber mas</NavLink>
           </div>
         </article>
 
@@ -57,7 +57,7 @@ const ModalMenu = () => {
             }
           </div>
             <div className="menuHover">
-            <NavLink to="/menu/tarts" className="buttonMenuModal"> Saber mas</NavLink>
+            <NavLink to="/Vegetalien/menu/tarts" className="buttonMenuModal"> Saber mas</NavLink>
             </div>
         </article>
 
@@ -81,7 +81,7 @@ const ModalMenu = () => {
           </div>
           <div className="menuHover">
 
-            <NavLink to="/menu/drinks" className="buttonMenuModal"> Saber mas</NavLink>
+            <NavLink to="/Vegetalien/menu/drinks" className="buttonMenuModal"> Saber mas</NavLink>
           </div>
         </article>
 
@@ -105,7 +105,7 @@ const ModalMenu = () => {
           </div>
           <div className="menuHover">
 
-            <NavLink to="/menu/boulangerie" className="buttonMenuModal"> Saber mas</NavLink>
+            <NavLink to="/Vegetalien/menu/boulangerie" className="buttonMenuModal"> Saber mas</NavLink>
 
           </div>
         </article>
@@ -130,7 +130,7 @@ const ModalMenu = () => {
           </div>
           <div className="menuHover">
 
-            <NavLink to="/menu/pettit" className="buttonMenuModal"> Saber mas</NavLink>
+            <NavLink to="/Vegetalien/menu/pettit" className="buttonMenuModal"> Saber mas</NavLink>
           </div>
         </article>
 
@@ -155,7 +155,7 @@ const ModalMenu = () => {
           </div>
           <div className="menuHover">
 
-            <NavLink to="/menu/eclair" className="buttonMenuModal"> Saber mas</NavLink>
+            <NavLink to="/Vegetalien/menu/eclair" className="buttonMenuModal"> Saber mas</NavLink>
           </div>
         </article>
 
@@ -179,7 +179,7 @@ const ModalMenu = () => {
           </div>
           <div className="menuHover">
 
-            <NavLink to="/menu/cakes" className="buttonMenuModal"> Saber mas</NavLink>
+            <NavLink to="/Vegetalien/menu/cakes" className="buttonMenuModal"> Saber mas</NavLink>
           </div>
         </article>
       </div>

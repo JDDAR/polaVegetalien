@@ -26,14 +26,14 @@ return (
              <hr/> 
           </section>
           <nav className={`stickyHeader__nav ${isOpen && "open"}`}> 
-            <NavLink  className='stickyHeader__link' to="/" >Inicio</NavLink>
-            <NavLink  className='stickyHeader__link'  to="/menu/macarons" >Macarons</NavLink>
-            <NavLink  className='stickyHeader__link' to="/menu/tarts" >Tarts</NavLink>
-            <NavLink  className='stickyHeader__link' to="/menu/drinks" >Drinks</NavLink>
-            <NavLink  className='stickyHeader__link' to="/menu/boulangerie" >Boulangerie</NavLink>
-            <NavLink  className='stickyHeader__link' to="/menu/pettit" >Pettit</NavLink>
-            <NavLink  className='stickyHeader__link' to="/menu/eclair" >Eclair</NavLink>
-            <NavLink  className='stickyHeader__link' to="/menu/cakes" >Cackes</NavLink>
+            <NavLink  className='stickyHeader__link' to="/Vegetalien" >Inicio</NavLink>
+            <NavLink  className='stickyHeader__link'  to="/Vegetalien/menu/macarons" >Macarons</NavLink>
+            <NavLink  className='stickyHeader__link' to="/Vegetalien/menu/tarts" >Tarts</NavLink>
+            <NavLink  className='stickyHeader__link' to="/Vegetalien/menu/drinks" >Drinks</NavLink>
+            <NavLink  className='stickyHeader__link' to="/Vegetalien/menu/boulangerie" >Boulangerie</NavLink>
+            <NavLink  className='stickyHeader__link' to="/Vegetalien/menu/pettit" >Pettit</NavLink>
+            <NavLink  className='stickyHeader__link' to="/Vegetalien/menu/eclair" >Eclair</NavLink>
+            <NavLink  className='stickyHeader__link' to="/Vegetalien/menu/cakes" >Cackes</NavLink>
           </nav>
           <div className={`nav_toggle ${isOpen && "open"}`} onClick={ () => setIsOpen(!isOpen)} >
                 <span></span>
