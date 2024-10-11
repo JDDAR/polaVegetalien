@@ -26,7 +26,7 @@ export const menuSpecificData = [
   {
     id: 4,
     img_URL:
-      "https://images.unsplash.com/photo-1688978503769-2e6875d29dfc?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1616150890830-84e9dbbb3e9d?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     type: "boulangerie",
     description:
       "Productos de boulangerie recién horneados con recetas tradicionales. Disfruta de panes, baguettes y otros productos auténticos que te transportarán a Francia.",
