@@ -1,17 +1,15 @@
-import '../../styles/components/home/_home.scss'
-import CarouselHome from '../carousels/carouselHome'
+import "../../styles/components/home/_home.scss";
+import CarouselHome from "../carousels/carouselHome";
 
 const Home = () => {
-
-  return(
+  return (
     <>
-   <CarouselHome />
-    <section className="container">
-      <div className="homeContainer">        
-      </div>
-    </section>
+      <CarouselHome />
+      <section className="container">
+        <div className="homeContainer"></div>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

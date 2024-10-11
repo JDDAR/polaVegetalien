@@ -1,5 +1,5 @@
-@use '../../variables' as v ;
-@use '../../components/buttons/buttons.scss' as b;
+@use "../../variables" as v;
+@use "../../components/buttons/buttons.scss" as b;
 
 .navContainer {
   background: v.$color-BG-primary;
@@ -9,7 +9,7 @@
   margin: auto;
   width: 100%;
   transition: 0.6s ease;
-  z-index: 1;
+  z-index: 2;
 }
 
 .sticky {
@@ -20,8 +20,7 @@
   padding-top: 5px;
   top: 0;
   transition: 0.6s ease-in-out;
-  display: flex; 
-
+  display: flex;
 }
 
 .stickyHeader {
@@ -47,51 +46,53 @@
       border-bottom: 0.5px solid v.$color-primary;
     }
     h2 {
-      width:auto;
+      width: auto;
+      font-size: 1.5rem;
+      color: v.$color-font-primary;
     }
   }
 
   &__nav {
     font-family: v.$font-family-text;
     width: 100%;
-    font-size: 15px;
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     gap: 25px;
   }
-  &__link{ 
+  &__link {
     text-decoration: none;
     color: v.$color-font-primary;
     padding: 5px 10px;
     border: 1px solid transparent;
-    &:hover{ 
+    font-size: 0.9rem;
+    &:hover {
       color: v.$color-font-primary;
       border-bottom: 1px solid v.$color-primary;
-
     }
   }
-  .nav_toggle{
+  .nav_toggle {
     display: none;
   }
 }
 
 @media (max-width: 920px) {
-  .sticky{
+  .sticky {
     padding-top: 0px;
   }
   .stickyHeader {
     padding-top: 10px;
     align-items: center;
     gap: 5px;
-    &__logo{
+    &__logo {
       justify-content: center;
       width: 60%;
       gap: 25px;
-      hr{
+      hr {
         width: 30%;
       }
     }
-    &__nav{
+    &__nav {
       gap: 15px;
     }
     &__link {
@@ -101,8 +102,8 @@
 }
 
 @media (max-width: 768px) {
-  .stickyHeader { 
-    &__nav{
+  .stickyHeader {
+    &__nav {
       position: absolute;
       top: 0;
       left: 0;
@@ -111,36 +112,35 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
-      height:100vh;        
+      height: 100vh;
       transform: translateX(-100%);
       transition: 0.3s ease all;
     }
-    &__nav.open{
+    &__nav.open {
       transform: translateX(0) !important;
     }
-    .nav_toggle{
+    .nav_toggle {
       display: flex;
       flex-direction: column;
       margin: 15px;
     }
-    .nav_toggle span{
+    .nav_toggle span {
       width: 30px;
       height: 4px;
       background: v.$color-font-primary;
       margin-bottom: 5px;
-      border-radius: 2px; 
+      border-radius: 2px;
       transform-origin: 5px 0px;
       transition: all 0.2s linear;
     }
-    .nav_toggle.open > span{
+    .nav_toggle.open > span {
       transform: rotate(45deg) translate(0px, 0px);
     }
-    .nav_toggle.open > span:nth-child(2){
+    .nav_toggle.open > span:nth-child(2) {
       display: none;
     }
-    .nav_toggle.open > span:nth-child(3){
+    .nav_toggle.open > span:nth-child(3) {
       transform: rotate(-45deg) translate(-5px, 1px);
     }
-
   }
 }

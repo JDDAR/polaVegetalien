@@ -1,15 +1,15 @@
-@use '../../variables' as v ;
-@use '../../components/buttons/buttons.scss' as b;
+@use "../../variables" as v;
+@use "../../components/buttons/buttons.scss" as b;
 
 .modalContainer {
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
   height: 100vh;
-  color: blue; 
+  color: blue;
   background: v.$color-BG-modals;
   backdrop-filter: blur(5px);
-  display: flex; 
+  display: flex;
 
   &__modal {
     width: 80%;
@@ -17,7 +17,7 @@
     height: 80vh;
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
     article {
@@ -30,7 +30,11 @@
           position: absolute;
           width: 100%;
           height: 100%;
-          background: linear-gradient(270deg, v.$color-BG-primary 50%, rgba(255, 255, 255, 0.00) 90%);
+          background: linear-gradient(
+            270deg,
+            v.$color-BG-primary 50%,
+            rgba(255, 255, 255, 0) 90%
+          );
           z-index: 1;
           border-radius: 6px;
         }
@@ -41,7 +45,7 @@
           object-fit: cover;
         }
       }
-      .menuModalInfo { 
+      .menuModalInfo {
         width: 50%;
         z-index: 2;
         display: flex;
@@ -67,7 +71,7 @@
         }
       }
 
-      .menuHover {  
+      .menuHover {
         display: none;
         justify-content: center;
         align-items: center;
@@ -98,7 +102,11 @@
         width: 100%;
         height: 50%;
         .gradientImg {
-          background: linear-gradient(360deg, v.$color-BG-primary 50%, rgba(255, 255, 255, 0.00) 90%);
+          background: linear-gradient(
+            360deg,
+            v.$color-BG-primary 50%,
+            rgba(255, 255, 255, 0) 90%
+          );
         }
       }
       .menuModalInfo {
@@ -111,52 +119,54 @@
     .menu2 {
       grid-area: 1 / 3 / 2 / 4;
     }
-    .menu3{
+    .menu3 {
       grid-area: 1 / 4 / 2 / 5;
     }
-    .menu4{
-      grid-area: 2 / 1 / 4 / 2; 
+    .menu4 {
+      grid-area: 2 / 1 / 4 / 2;
     }
-    .menu5{
+    .menu5 {
       grid-area: 2 / 2 / 4 / 3;
     }
     .menu6 {
       grid-area: 2 / 3 / 4 / 4;
     }
-    .menu7{
+    .menu7 {
       grid-area: 2 / 4 / 4 / 5;
     }
   }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .modalContainer {
     &__modal {
       width: 90%;
     }
   }
 }
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   .modalContainer {
-
     &__modal {
       height: auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4,1fr);
+      grid-template-rows: repeat(4, 1fr);
 
       article {
         height: 180px;
       }
-      
+
       .article-two {
         flex-direction: row;
-        .imgContainer{
+        .imgContainer {
           height: 100%;
           .gradientImg {
-          background: linear-gradient(270deg, v.$color-BG-primary 50%, rgba(255, 255, 255, 0.00) 90%);
+            background: linear-gradient(
+              270deg,
+              v.$color-BG-primary 50%,
+              rgba(255, 255, 255, 0) 90%
+            );
           }
-
         }
       }
 
@@ -166,37 +176,33 @@
       .menu2 {
         grid-area: 1 / 2 / 2 / 3;
       }
-      .menu3{
-        grid-area: 2 / 1 / 3 / 2; 
+      .menu3 {
+        grid-area: 2 / 1 / 3 / 2;
       }
-      .menu4{
+      .menu4 {
         grid-area: 2 / 2 / 3 / 3;
       }
-      .menu5{
+      .menu5 {
         grid-area: 3 / 1 / 4 / 2;
       }
       .menu6 {
         grid-area: 3 / 2 / 4 / 3;
       }
-      .menu7{
+      .menu7 {
         grid-area: 4 / 1 / 5 / 3;
       }
-
-
     }
   }
-} 
-
-@media(max-width: 480px) {
-.modalContainer {
-  &__modal {
-   display: flex;
-   flex-direction: column;
-  }
-  article {
-    height: 145px;
-  }
-
 }
 
+@media (max-width: 480px) {
+  .modalContainer {
+    &__modal {
+      display: flex;
+      flex-direction: column;
+    }
+    article {
+      height: 145px;
+    }
+  }
 }

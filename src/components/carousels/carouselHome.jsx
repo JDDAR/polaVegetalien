@@ -1,97 +1,89 @@
-import {useRef, useState, useEffect} from 'react';
-import '../../styles/components/carousels/_carouselHome.scss';
-
-import { useSelector } from 'react-redux';
-
-//datos 
-
-
+import { useState, useEffect } from "react";
+import "../../styles/components/carousels/_carouselHome.scss";
+import { useSelector } from "react-redux";
 
 const CarouselHome = () => {
-
   const { carrouselHome } = useSelector((store) => store.carrouselHome);
-
-  const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalTime = 100000;
 
   useEffect(() => {
-    const listNode = listRef.current;
-    const imgNode = listNode.querySelectorAll("li > img")[currentIndex]
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % carrouselHome.length);
+    }, intervalTime);
 
-    if(imgNode) {
-      imgNode.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-
-  }, [currentIndex]);
+    return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
+  }, [carrouselHome.length]);
 
   const scrollToImg = (direction) => {
-    if (direction === 'prev') {
-      setCurrentIndex(curr => {
-        const isFirstSlide = currentIndex === 0 ;
-        return isFirstSlide ? 0 : curr - 1;
-      })
-    }else {
-      const isLastSlide = currentIndex === carrouselHome.length - 1 ;
-      if(!isLastSlide) {
-        setCurrentIndex(curr => curr += 1)
-      } 
-    }
-  }
+    setCurrentIndex((curr) => {
+      if (direction === "prev") {
+        return curr === 0 ? carrouselHome.length - 1 : curr - 1;
+      } else {
+        return curr === carrouselHome.length - 1 ? 0 : curr + 1;
+      }
+    });
+  };
 
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
-  }
+  };
 
-  return(
-    <>
+  return (
     <section className="carouselHomeContainer">
-    <div className='carouselHomeContainer__slider-container '>
-
-     <span className="carouselHomeContainer__leftArrow" onClick={() => scrollToImg('prev')} >&#10092;</span>
-      <span className="carouselHomeContainer__rightArrow" onClick={() => scrollToImg('next')}>&#10093;</span> 
-
-    <div className=" carouselHomeContainer__container-img">
-    <ul ref={listRef} >
-      <span className="carouselHomeContainer__gradient"></span>
-    {
-      carrouselHome.map((imgCar) => {
-        return <li key={imgCar.id}>
-                  <img src={imgCar.imgURL} alt=""/>
-               </li>
-      })
-    }
-    </ul> 
-    </div>
-    </ div>
-
-    <section className="container"> 
-    <div className="container carouselHomeContainer__dots-container">
-    {
-      carrouselHome.map((img) => (
-        <div 
-        key={img.id}
-        className={`carouselHomeContainer__dots-item ${img.id === currentIndex ? "active" : "0"}`}
-        onClick= {() => goToSlide(img.id)}
+      <div className="carouselHomeContainer__slider-container">
+        <span
+          className="carouselHomeContainer__leftArrow"
+          role="button"
+          aria-label="Previous slide"
+          onClick={() => scrollToImg("prev")}
         >
+          &#10092;
+        </span>
+        <span
+          className="carouselHomeContainer__rightArrow"
+          role="button"
+          aria-label="Next slide"
+          onClick={() => scrollToImg("next")}
+        >
+          &#10093;
+        </span>
 
-
-        <section className="img-docts">  
-              <img src={img.imgURL}></img>
-        </section>
-        <section className='docts-descriptions'>
-            <h2>{img.homeTitle}</h2>
-        </section>
-
+        <div className="carouselHomeContainer__container-img">
+          <ul>
+            <span className="carouselHomeContainer__gradient"></span>
+            {carrouselHome.map((imgCar, index) => (
+              <li
+                key={imgCar.id}
+                className={index === currentIndex ? "active" : ""}
+              >
+                <img src={imgCar.imgURL} alt={imgCar.homeTitle} />
+              </li>
+            ))}
+          </ul>
         </div>
-      ))
-    }
-    </div>
-    </section>
-    </section>
-    </>
-  )
-}
+      </div>
 
-export default CarouselHome
+      <section className="carouselHomeContainer__dots-container">
+        {carrouselHome.map((img, index) => (
+          <div
+            key={img.id}
+            className={`carouselHomeContainer__dots-item ${index === currentIndex ? "active" : ""}`}
+            onClick={() => goToSlide(index)}
+            role="button"
+            aria-label={`Go to slide ${index + 1}`}
+          >
+            <section className="img-docts">
+              <img src={img.imgURL} alt={img.homeTitle} />
+            </section>
+            <section className="docts-descriptions">
+              <h2>{img.homeTitle}</h2>
+            </section>
+          </div>
+        ))}
+      </section>
+    </section>
+  );
+};
+
+export default CarouselHome;

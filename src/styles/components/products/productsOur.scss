@@ -1,20 +1,21 @@
-@use '../../variables' as v;
-@use '../../components/buttons/buttons.scss' as b;
+@use "../../variables" as v;
+@use "../../components/buttons/buttons.scss" as b;
 
 .productContainer {
   display: flex;
   flex-direction: column;
-  transition: 0.6s ease-in-out;
-  padding-block: 15px;
-  &:hover{
-    border: none;
-    border-radius: 6px;
-    position: relative;
-    box-shadow: v.$box-shadow-products; 
-    padding: 15px;
+  transition: 0.3s ease-in-out;
+  border: 0.5px solid rgba(v.$color-font-primary, 0.08);
+  border-radius: 6px;
+  position: relative;
+  padding: 8px;
+  &:hover {
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
 
-  &__product-img{
+  &__product-img {
     height: 150px;
     border-radius: 6px;
     box-shadow: v.$box-shadow;
@@ -39,16 +40,92 @@
       font-size: 12px;
       font-weight: 200;
     }
-
   }
-  &__product-price{
+  &__product-price {
     display: flex;
     justify-content: space-between;
     span {
-      font-size: 18px;
+      font-size: 1rem;
+      font-weight: 500;
     }
     a {
       @include b.buttonSecondary();
     }
+  }
+  .buttonModalProducts {
+    //background: v.$color-primary;
+    //padding: 10px 10px;
+    border-radius: 6px;
+    font-size: 1em;
+    color: v.$color-primary;
+    cursor: pointer;
+    border: none;
+    font-weight: 800;
+    background: none;
+  }
+}
+
+/*Estilos del modal */
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  border-radius: 12px;
+  position: relative;
+
+  &-img {
+    border-radius: 12px;
+    width: 100%;
+
+    img {
+      border-radius: 12px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-titleDescripcion {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      p {
+        font-size: 0.9rem;
+        line-height: 150%;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: v.$color-primary;
+    cursor: pointer;
   }
 }

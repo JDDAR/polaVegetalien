@@ -1,61 +1,66 @@
-@use "../../variables" as v ;
+@use "../../variables" as v;
 
+// Estilos para el contenedor de los botones sociales en el encabezado
 .socialHeader {
-  margin-top: 5px;
+  margin-top: 50px;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   left: 200px;
   gap: 5px;
 
-  a{
+  // Estilo de los enlaces dentro del contenedor
+  a {
     background: v.$color-primary;
     color: v.$color-BG-primary;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20px;
-    width: 20px;
+    height: 30px; // Tamaño del botón ajustado
+    width: 30px; // Tamaño del botón ajustado
     border-radius: 50%;
     border: 1px solid v.$color-BG-primary;
     box-shadow: v.$box-shadow;
+
     .socialIcon {
-      font-size: 12px;
+      font-size: 16px; // Tamaño de icono ajustado
       color: v.$color-BG-primary;
     }
   }
-
 }
 
-
+// Estilos para el contenedor de los botones sociales en otras ubicaciones
 .social {
   margin-top: 5px;
   width: 100%;
-  position: absolute ;
+  position: absolute; // Oposición a fixed en .socialHeader
   z-index: 2;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 5px;
-  a{
+
+  a {
     background: v.$color-primary;
     color: v.$color-BG-primary;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20px;
-    width: 20px;
+    height: 30px; // Tamaño del botón ajustado
+    width: 30px; // Tamaño del botón ajustado
     border-radius: 50%;
     border: 1px solid v.$color-BG-primary;
     box-shadow: v.$box-shadow;
+
     .socialIcon {
-      font-size: 12px;
+      font-size: 16px; // Tamaño de icono ajustado
       color: v.$color-BG-primary;
     }
   }
 }
 
+// Medias queries para ajustes responsivos
 @media (max-width: 1280px) {
   .socialHeader {
     left: 100px;
@@ -63,19 +68,19 @@
 }
 
 @media (max-width: 1080px) {
-  .socialHeader{
+  .socialHeader {
     left: 50px;
   }
 }
 
 @media (max-width: 920px) {
   .socialHeader {
-      margin-top: 35px;
+    margin-top: 35px;
   }
 }
 
 @media (max-width: 380px) {
-  .socialHeader{
+  .socialHeader {
     left: 25px;
   }
 }

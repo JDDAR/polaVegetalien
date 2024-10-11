@@ -1,25 +1,19 @@
+import "../../styles/components/buttons/buttonsFilter.scss";
 
-import '../../styles/components/buttons/buttonsFilter.scss';
-
-const ButtonFilter = ({menuButons, filterType, active, setType}) => {
+const ButtonFilter = ({ menuButtons, filterType, active }) => {
   return (
-    <> 
     <section className="buttonProducts">
-    {
-      menuButons.map(type => ( 
-        <button 
-        key={type}
-        onClick={() => filterType(type)}
-        className={ filterType === type.type ? "active" : ""} 
+      {menuButtons.map((buttonType) => (
+        <button
+          key={buttonType}
+          onClick={() => filterType(buttonType)}
+          className={active === buttonType ? "active" : ""}
         >
-        {type}
+          {buttonType}
         </button>
-      ))
-    }
+      ))}
     </section>
-    </>
-  )
-}
+  );
+};
 
-
-export default ButtonFilter
+export default ButtonFilter;

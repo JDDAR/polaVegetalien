@@ -1,9 +1,9 @@
-@use '../../variables' as v;
+@use "../../variables" as v;
 
 .footer {
   position: relative;
   background: v.$color-primary;
-  width: 100vw;
+  width: 100%;
   height: auto;
   padding-top: 25px;
   box-shadow: v.$box-shadow;
@@ -26,7 +26,7 @@
       width: 100%;
     }
 
-    &__info{
+    &__info {
       border-right: 1px solid v.$color-BG-primary;
       display: flex;
       align-items: center;
@@ -38,7 +38,7 @@
     }
 
     &__menu {
-      border-right: 1px solid v.$color-BG-primary; 
+      border-right: 1px solid v.$color-BG-primary;
     }
     &__social {
       position: relative;
@@ -62,34 +62,33 @@
 }
 
 @media (max-width: 720px) {
- .footer {  
-  .footerContent {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  .footer {
+    .footerContent {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
 
+      &__info {
+        padding: 25px 0px;
+        width: 100%;
+        border-right: 0px;
+        border-bottom: 1px solid v.$color-BG-primary;
+        p {
+          margin: auto;
+          width: 100%;
+          text-align: center;
+        }
+      }
 
-  &__info{
-    padding: 25px 0px;
-    width: 100%;
-    border-right: 0px;
-    border-bottom: 1px solid v.$color-BG-primary;
-    p{
-      margin: auto;
-      width: 100%;
-      text-align: center;
+      &__menu {
+        padding: 25px 0px;
+        height: 50px;
+        border-bottom: 1px solid v.$color-BG-primary;
+        border-right: 0px;
+      }
+      &__social {
+        padding: 25px 0px;
+      }
     }
   }
-
-  &__menu {
-    padding: 25px 0px;
-    height: 50px;
-    border-bottom: 1px solid v.$color-BG-primary;
-    border-right: 0px;
-  }
-  &__social {
-    padding: 25px 0px;
-  }
-  }
- }
 }
