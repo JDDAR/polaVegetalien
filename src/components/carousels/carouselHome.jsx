@@ -76,9 +76,11 @@ const CarouselHome = () => {
             <section className="img-docts">
               <img src={img.imgURL} alt={img.homeTitle} />
             </section>
+            {/*
             <section className="docts-descriptions">
               <h2>{img.homeTitle}</h2>
             </section>
+            */}
           </div>
         ))}
       </section>

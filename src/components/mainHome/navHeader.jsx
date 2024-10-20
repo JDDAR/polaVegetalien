@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 import "../../styles/components/navHeader/_navHeader.scss";
+import { NavLink } from "react-router-dom";
 
 const NavHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +21,18 @@ const NavHeader = () => {
           <div className="stickyHeader">
             <section className="stickyHeader__logo">
               <hr />
-              <h2>LeVegetalien</h2>
+              <NavLink className="titleHeader" to="/Vegetalien">
+                <h2>
+                  LeVegetalien
+                  <span> au Pola</span>
+                </h2>
+              </NavLink>
               <hr />
             </section>
+            <div className="stickyHeader__textNav">
+              <p>Pâtisserie traditionnelle française</p>
+            </div>
+            {/*
             <nav className={`stickyHeader__nav ${isOpen && "open"}`}>
               <NavLink className="stickyHeader__link" to="/Vegetalien">
                 Inicio
@@ -70,6 +80,7 @@ const NavHeader = () => {
                 Cackes
               </NavLink>
             </nav>
+            */}
             <div
               className={`nav_toggle ${isOpen && "open"}`}
               onClick={() => setIsOpen(!isOpen)}

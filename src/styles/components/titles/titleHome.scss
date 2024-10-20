@@ -1,7 +1,6 @@
-@use '../../variables' as v;
+@use "../../variables" as v;
 
 .titleHome {
-
   width: 50%;
   margin: auto;
   display: flex;
@@ -26,5 +25,18 @@
     font-size: 12px;
     margin-bottom: 15px;
   }
+}
 
+@media (max-width: 800px) {
+  .titleHome {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .titleHome {
+    padding-top: 35px;
+    h2 {
+      font-size: 2rem;
+    }
+  }
 }

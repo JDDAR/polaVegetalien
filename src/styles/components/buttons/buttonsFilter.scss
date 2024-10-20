@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
+  flex-wrap: wrap;
 
   button {
     cursor: pointer;
@@ -22,6 +23,13 @@
 @media (max-width: 720px) {
   .buttonProducts {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 400px) {
+  .buttonProducts {
+    button {
+      padding: 10px 25px;
+    }
   }
 }
 

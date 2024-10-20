@@ -1,8 +1,10 @@
 @use "../../variables" as v;
 
 .specialistsContainer {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   position: relative;
+  margin-top: 50px;
 
   &__content-specialists {
     width: 100%;
@@ -15,13 +17,10 @@
   &__content-info {
     width: 100%;
     position: relative;
-    text-align: end;
+    text-align: start;
     display: flex;
     gap: 25px;
     flex-direction: column;
-    button {
-      padding: 15px 30px;
-    }
   }
 
   &__specialists-img {
@@ -32,6 +31,20 @@
       height: 100%;
       border-radius: 12px;
       object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .specialistsContainer {
+    width: 90%;
+    margin-top: 0px;
+    &__content-specialists {
+      padding: 0px;
+    }
+
+    &__specialists-img {
+      height: 80%;
     }
   }
 }
@@ -59,6 +72,25 @@
         height: 100%;
         right: -31px;
       }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .specialistsContainer {
+    &__content-specialists {
+      gap: 15px;
+      flex-direction: column-reverse;
+    }
+
+    &__content-info {
+      margin-top: 0;
+      width: 100%;
+    }
+
+    &__specialists-img {
+      height: 50vh;
+      width: 100%;
+      left: -31px;
     }
   }
 }

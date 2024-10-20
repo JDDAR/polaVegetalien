@@ -35,23 +35,37 @@
 
   &__logo {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 50px;
     hr {
-      width: 90%;
+      width: 10%;
       height: 0;
       background: transparent;
       border: none;
       border-bottom: 0.5px solid v.$color-primary;
     }
+
+    .titleHeader {
+      text-decoration: none;
+    }
     h2 {
       width: auto;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
+      font-weight: 500;
       color: v.$color-font-primary;
+      font-family: v.$font-family-title;
+
+      span {
+        font-size: 0.8rem;
+        font-weight: 100;
+      }
     }
   }
-
+  &__textNav {
+    text-align: center;
+    font-family: v.$font-family-text;
+  }
   &__nav {
     font-family: v.$font-family-text;
     width: 100%;
@@ -81,19 +95,19 @@
     padding-top: 0px;
   }
   .stickyHeader {
-    padding-top: 10px;
+    padding-top: 5px;
     align-items: center;
     gap: 5px;
     &__logo {
       justify-content: center;
-      width: 60%;
+      width: 90%;
       gap: 25px;
       hr {
         width: 30%;
       }
     }
     &__nav {
-      gap: 15px;
+      gap: 10px;
     }
     &__link {
       padding: 5px 5px;
@@ -103,6 +117,11 @@
 
 @media (max-width: 768px) {
   .stickyHeader {
+    &__logo {
+      hr {
+        width: 10%;
+      }
+    }
     &__nav {
       position: absolute;
       top: 0;
@@ -120,7 +139,7 @@
       transform: translateX(0) !important;
     }
     .nav_toggle {
-      display: flex;
+      display: none;
       flex-direction: column;
       margin: 15px;
     }

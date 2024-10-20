@@ -1,8 +1,14 @@
+import macaronsHome from "../assets/img/Carrusel/macarons_Home.png";
+import eclairHome from "../assets/img/Carrusel/eclair_Home.png";
+import cackesHome from "../assets/img/Carrusel/cackes_home.png";
+import tartsHome from "../assets/img/Carrusel/tarts_home.png";
+import boulangerieHome from "../assets/img/Carrusel/bougeranie_home.png";
+import drinksHome from "../assets/img/Carrusel/DrinksHome.png";
+import pettitHome from "../assets/img/Carrusel/pettitHome.png";
 export const carrouselHome = [
   {
     id: 1,
-    imgURL:
-      "https://cdn.pixabay.com/photo/2017/07/28/14/29/macarons-2548827_1280.jpg",
+    imgURL: macaronsHome,
     homeTitle: "Macarons",
     homeDescription:
       "Deliciosos macarons de diversos sabores, perfectos para cualquier ocasión.",
@@ -10,8 +16,7 @@ export const carrouselHome = [
   },
   {
     id: 2,
-    imgURL:
-      "https://images.unsplash.com/photo-1582217271932-3ace3faf5325?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgURL: eclairHome,
     homeTitle: "Croissants",
     homeDescription:
       "Croissants recién horneados, con una textura crujiente y un sabor irresistible.",
@@ -19,8 +24,7 @@ export const carrouselHome = [
   },
   {
     id: 3,
-    imgURL:
-      "https://images.unsplash.com/photo-1588685723157-4bcbf57fba57?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgURL: cackesHome,
     homeTitle: "Cakes",
     homeDescription:
       "Cakes artesanales, ideales para celebraciones y eventos especiales.",
@@ -28,9 +32,32 @@ export const carrouselHome = [
   },
   {
     id: 4,
-    imgURL:
-      "https://images.unsplash.com/photo-1722324260745-867e1f19ec89?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgURL: tartsHome,
     homeTitle: "Tarts",
+    homeDescription:
+      "Tarts frescos y llenos de sabor, perfectos para un postre ligero.",
+    homeButton: "Descubrir Tarts",
+  },
+  {
+    id: 5,
+    imgURL: boulangerieHome,
+    homeTitle: "boulangerie",
+    homeDescription:
+      "Tarts frescos y llenos de sabor, perfectos para un postre ligero.",
+    homeButton: "Descubrir Tarts",
+  },
+  {
+    id: 6,
+    imgURL: drinksHome,
+    homeTitle: "Drinks",
+    homeDescription:
+      "Tarts frescos y llenos de sabor, perfectos para un postre ligero.",
+    homeButton: "Descubrir Tarts",
+  },
+  {
+    id: 4,
+    imgURL: pettitHome,
+    homeTitle: "Pettit",
     homeDescription:
       "Tarts frescos y llenos de sabor, perfectos para un postre ligero.",
     homeButton: "Descubrir Tarts",

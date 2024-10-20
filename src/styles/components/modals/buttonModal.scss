@@ -8,7 +8,7 @@
     cursor: pointer;
     box-shadow: v.$box-shadow;
     position: fixed;
-    top: 55px;
+    top: 25px;
     right: 200px;
     border: none;
     @include b.buttonPrimary();
@@ -35,7 +35,7 @@
 @media (max-width: 920px) {
   .buttonModal {
     .menuModal {
-      top: 30px;
+      top: 10px;
       padding: 8px 25px;
     }
   }
@@ -44,7 +44,7 @@
 @media (max-width: 380px) {
   .buttonModal {
     .menuModal {
-      right: 25px;
+      right: 10px;
     }
   }
 }

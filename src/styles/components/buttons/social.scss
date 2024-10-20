@@ -2,8 +2,7 @@
 
 // Estilos para el contenedor de los botones sociales en el encabezado
 .socialHeader {
-  margin-top: 50px;
-  width: 100%;
+  margin-top: 25px;
   position: fixed;
   z-index: 3;
   display: flex;
@@ -82,5 +81,6 @@
 @media (max-width: 380px) {
   .socialHeader {
     left: 25px;
+    display: none;
   }
 }

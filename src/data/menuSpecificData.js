@@ -18,7 +18,7 @@ export const menuSpecificData = [
   {
     id: 3,
     img_URL:
-      "https://images.unsplash.com/photo-1661529548674-8dae0330fe04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1507546602-311207b97bfa?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     type: "drinks",
     description:
       "Una selección de bebidas refrescantes y revitalizantes, ideales para acompañar tus momentos especiales. Desde jugos naturales hasta cócteles innovadores.",
@@ -26,7 +26,7 @@ export const menuSpecificData = [
   {
     id: 4,
     img_URL:
-      "https://images.unsplash.com/photo-1616150890830-84e9dbbb3e9d?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1597528662465-55ece5734101?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     type: "boulangerie",
     description:
       "Productos de boulangerie recién horneados con recetas tradicionales. Disfruta de panes, baguettes y otros productos auténticos que te transportarán a Francia.",
@@ -34,7 +34,7 @@ export const menuSpecificData = [
   {
     id: 5,
     img_URL:
-      "https://photos.fife.usercontent.google.com/pw/AP1GczOqDO2K30ussWpA3cAE1K3Tq9vanU_CSHdtQRCH-PX9gZdpAjlv1V-E=w1911-h1019-s-no-gm?authuser=0",
+      "https://images.unsplash.com/photo-1621134283184-5e7881013013?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     type: "pettit",
     description:
       "Deliciosos petit fours, ideales para ocasiones especiales. Cada bocado es una explosión de sabor en un tamaño pequeño pero elegante.",
