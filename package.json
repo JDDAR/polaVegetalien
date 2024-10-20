@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jddar.github.com/Vegetalien",
+  "homepage": "https://jddar.github.io/Vegetalien",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
