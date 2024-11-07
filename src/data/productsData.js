@@ -3,7 +3,7 @@ const productsData = [
     id: 1,
     title: "Croissant",
     price: 90,
-    img: "https://images.pexels.com/photos/5436431/pexels-photo-5436431.jpeg",
+    img: "https://images.pexels.com/photos/24838082/pexels-photo-24838082/free-photo-of-desayuno-panaderia-dulce-almendra.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "boulangerie",
     description:
@@ -13,7 +13,7 @@ const productsData = [
     id: 2,
     title: "Pan de Chocolate",
     price: 90,
-    img: "https://images.pexels.com/photos/5436431/pexels-photo-5436431.jpeg",
+    img: "https://images.pexels.com/photos/6829492/pexels-photo-6829492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "boulangerie",
     description:
@@ -33,7 +33,7 @@ const productsData = [
     id: 4,
     title: "Pan de Chocolate",
     price: 90,
-    img: "https://images.unsplash.com/photo-1688978503769-2e6875d29dfc?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.pexels.com/photos/8909323/pexels-photo-8909323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "boulangerie",
     description:
@@ -43,7 +43,7 @@ const productsData = [
     id: 5,
     title: "Milhojas (Mille-feuille)",
     price: 90,
-    img: "https://images.pexels.com/photos/5436431/pexels-photo-5436431.jpeg",
+    img: "https://images.pexels.com/photos/11922700/pexels-photo-11922700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "boulangerie",
     description:
@@ -56,7 +56,7 @@ const productsData = [
     id: 6,
     title: "Chocolate",
     price: 800,
-    img: "https://images.pexels.com/photos/8197737/pexels-photo-8197737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/18330355/pexels-photo-18330355/free-photo-of-comida-desierto-panaderia-chocolate.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "eclair",
     description:
@@ -66,7 +66,7 @@ const productsData = [
     id: 7,
     title: "Arequipe",
     price: 800,
-    img: "https://images.pexels.com/photos/8197737/pexels-photo-8197737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/5665687/pexels-photo-5665687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "eclair",
     description:
@@ -76,7 +76,7 @@ const productsData = [
     id: 8,
     title: "Piña",
     price: 800,
-    img: "https://images.pexels.com/photos/8197737/pexels-photo-8197737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/19490384/pexels-photo-19490384/free-photo-of-colorido-de-colores-dulce-crema.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "eclair",
     description:
@@ -88,7 +88,7 @@ const productsData = [
     id: 11,
     title: "Ópera",
     price: 90,
-    img: "https://images.pexels.com/photos/13715795/pexels-photo-13715795.jpeg",
+    img: "https://images.pexels.com/photos/20818067/pexels-photo-20818067/free-photo-of-postre-pastel-fotografia-de-comida-enfoque-selectivo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "cakes",
     description:
@@ -98,7 +98,7 @@ const productsData = [
     id: 12,
     title: "Charter Hotel",
     price: 90,
-    img: "https://images.pexels.com/photos/13715795/pexels-photo-13715795.jpeg",
+    img: "https://images.unsplash.com/photo-1569896254409-ac66c17041d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     amount: 1,
     type: "cakes",
     description:
@@ -120,7 +120,7 @@ const productsData = [
     id: 17,
     title: "BonBon",
     price: 90,
-    img: "https://images.pexels.com/photos/5946041/pexels-photo-5946041.jpeg",
+    img: "https://images.pexels.com/photos/15420473/pexels-photo-15420473/free-photo-of-comida-dulce-papel-bandeja.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "pettit",
     description:
@@ -130,7 +130,7 @@ const productsData = [
     id: 18,
     title: "Chocolate Barras",
     price: 90,
-    img: "https://images.pexels.com/photos/5946041/pexels-photo-5946041.jpeg",
+    img: "https://images.pexels.com/photos/4110088/pexels-photo-4110088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "pettit",
     description:
@@ -141,7 +141,7 @@ const productsData = [
     id: 21,
     title: "Chocolate",
     price: 90,
-    img: "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg",
+    img: "https://images.pexels.com/photos/691152/pexels-photo-691152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "tarts",
     description:
@@ -151,7 +151,7 @@ const productsData = [
     id: 22,
     title: "Black and White (Especial de la casa)",
     price: 90,
-    img: "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg",
+    img: "https://images.pexels.com/photos/8670439/pexels-photo-8670439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "tarts",
     description:
@@ -161,7 +161,7 @@ const productsData = [
     id: 23,
     title: "Frambuesa",
     price: 90,
-    img: "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg",
+    img: "https://images.pexels.com/photos/17402675/pexels-photo-17402675/free-photo-of-comida-plato-postre-pastel.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "tarts",
     description:
@@ -171,47 +171,47 @@ const productsData = [
     id: 24,
     title: "Curuba",
     price: 90,
-    img: "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg",
+    img: "https://images.pexels.com/photos/15913636/pexels-photo-15913636/free-photo-of-comida-plato-dulce-pastel.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "tarts",
     description:
       "Esta tarta exótica presenta una base crujiente y un cremoso relleno de curuba, aportando notas tropicales únicas. Perfecta para quienes buscan algo diferente y refrescante",
   },
   {
-    id: 24,
+    id: 25,
     title: "Mango",
     price: 90,
-    img: "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg",
+    img: "https://images.pexels.com/photos/2335682/pexels-photo-2335682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "tarts",
     description:
       "Una tarta de mango que combina la dulzura de la fruta madura con un relleno cremoso y suave. Su base ligera y crocante equilibra la textura y el sabor, haciendo de esta tarta un deleite tropical.",
   },
   {
-    id: 24,
+    id: 26,
     title: "Arequipe",
     price: 90,
-    img: "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg",
+    img: "https://images.pexels.com/photos/19244738/pexels-photo-19244738/free-photo-of-azucar-postre-dulce-delicioso.jpeg",
     amount: 1,
     type: "tarts",
     description:
       "Una deliciosa tarta de arequipe con una base crujiente que se deshace en la boca, rellena de un dulce y cremoso arequipe colombiano. Su sabor caramelizado ofrece un placer dulce irresistible.",
   },
   {
-    id: 24,
+    id: 27,
     title: "Cereza",
     price: 90,
-    img: "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg",
+    img: "https://images.pexels.com/photos/1282279/pexels-photo-1282279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "tarts",
     description:
       "Una tarta delicada con un relleno de cerezas maceradas en su jugo natural, cubierta con una fina capa de glaseado de cereza. La base de masa crujiente complementa la jugosidad y la dulzura de las cerezas.",
   },
   {
-    id: 24,
+    id: 28,
     title: "Fresa",
     price: 90,
-    img: "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg",
+    img: "https://images.pexels.com/photos/4748359/pexels-photo-4748359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "tarts",
     description:
@@ -223,7 +223,7 @@ const productsData = [
     id: 25,
     title: "Chocolate",
     price: 90,
-    img: "https://images.pexels.com/photos/2226977/pexels-photo-2226977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/8718009/pexels-photo-8718009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "macarons",
     description:
@@ -233,7 +233,7 @@ const productsData = [
     id: 26,
     title: "Black and White (Especial de la casa)",
     price: 90,
-    img: "https://images.pexels.com/photos/2226977/pexels-photo-2226977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/7296682/pexels-photo-7296682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "macarons",
     description:
@@ -243,7 +243,7 @@ const productsData = [
     id: 27,
     title: "Frambuesa",
     price: 90,
-    img: "https://images.pexels.com/photos/2226977/pexels-photo-2226977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/13344223/pexels-photo-13344223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "macarons",
     description:
@@ -253,7 +253,7 @@ const productsData = [
     id: 28,
     title: "Yuzu",
     price: 90,
-    img: "https://images.pexels.com/photos/2226977/pexels-photo-2226977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/15898637/pexels-photo-15898637/free-photo-of-dulce-galletas-delicioso-fotografia-de-comida.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "macarons",
     description:
@@ -263,7 +263,7 @@ const productsData = [
     id: 29,
     title: "Curuba",
     price: 90,
-    img: "https://images.pexels.com/photos/2226977/pexels-photo-2226977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/16946892/pexels-photo-16946892/free-photo-of-macarons-coloridos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "macarons",
     description:
@@ -274,7 +274,7 @@ const productsData = [
     id: 30,
     title: "Té de Flor de Jamaica",
     price: 90,
-    img: "https://images.pexels.com/photos/5946041/pexels-photo-5946041.jpeg",
+    img: "https://images.pexels.com/photos/5946806/pexels-photo-5946806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "drinks",
     description:
@@ -284,7 +284,7 @@ const productsData = [
     id: 31,
     title: "Chocolate Caliente",
     price: 90,
-    img: "https://images.pexels.com/photos/5946041/pexels-photo-5946041.jpeg",
+    img: "https://images.pexels.com/photos/19271883/pexels-photo-19271883/free-photo-of-navidad-pasteles-y-chocolate-caliente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "drinks",
     description:
@@ -294,7 +294,7 @@ const productsData = [
     id: 32,
     title: "Té de Jengibre",
     price: 90,
-    img: "https://images.pexels.com/photos/5946041/pexels-photo-5946041.jpeg",
+    img: "https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg",
     amount: 1,
     type: "drinks",
     description:
@@ -304,7 +304,7 @@ const productsData = [
     id: 33,
     title: "Café Americano y Espresso",
     price: 90,
-    img: "https://images.pexels.com/photos/5946041/pexels-photo-5946041.jpeg",
+    img: "https://images.pexels.com/photos/27548812/pexels-photo-27548812/free-photo-of-naturaleza-cafeina-cafe-relajacion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "drinks",
     description:

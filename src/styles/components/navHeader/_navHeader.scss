@@ -48,6 +48,16 @@
 
     .titleHeader {
       text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+      gap: 15px;
+      span {
+        color: v.$color-font-primary;
+        font-size: 1rem;
+        margin-top: -25px;
+        font-family: v.$font-family-title;
+      }
     }
     h2 {
       width: auto;
@@ -115,6 +125,23 @@
   }
 }
 
+@media (max-width: 900px) {
+  .navContainer {
+    height: 150px;
+  }
+  .titleHeader {
+    display: flex;
+    gap: 15px;
+    span {
+      color: red;
+      font-size: 0.8rem;
+      width: 100%;
+    }
+  }
+  .stickyHeader {
+    width: 90%;
+  }
+}
 @media (max-width: 768px) {
   .stickyHeader {
     &__logo {

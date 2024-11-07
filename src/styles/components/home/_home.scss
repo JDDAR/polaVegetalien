@@ -1,1 +1,17 @@
-
+.social_menu {
+  //border: 1px solid red;
+  position: fixed;
+  z-index: 3;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: 15px;
+}
+@media (max-width: 900px) {
+  .social_menu {
+    position: fixed;
+  }
+}

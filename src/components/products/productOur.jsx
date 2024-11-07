@@ -30,7 +30,7 @@ const ProductOur = ({ products }) => {
             <h2>{product.title}</h2>
             <span>{product.type}</span>
             <section className="productContainer__product-price">
-              <span>${product.price}</span>
+              <span></span>
               <span>
                 <button
                   className="buttonModalProducts"
@@ -58,13 +58,13 @@ const ProductOur = ({ products }) => {
                 <h2>{selectedProduct.title}</h2>
                 <p>{selectedProduct.description}</p>
               </div>
-              <span>${selectedProduct.price}</span>
+              <span></span>
               {/* Botón para redirigir a WhatsApp */}
               <a
                 href={getWhatsAppLink(selectedProduct)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=""
+                className="buttonPrimary"
               >
                 Contactar Por whatsapp
               </a>

@@ -16,8 +16,11 @@ const MenuSpecific = () => {
 
   return (
     <>
-      <SocialButtons social="socialHeader" />
-      <ButtonModal />
+      <div className="social_menu">
+        <SocialButtons social="socialHeader" />
+        <ButtonModal />
+      </div>
+      <NavHeader />
       <NavHeader />
       <section className="menuSpecificContainer">
         {menuSpecificData
@@ -37,6 +40,7 @@ const MenuSpecific = () => {
             })
             .map((info) => (
               <header className="menuSpecific__header" key={info.id}>
+                <h4>`&quot; {info.frase} &quot; `</h4>
                 <h2>{params.menuSpecific}</h2>
                 <p>{info.description}</p>
               </header>

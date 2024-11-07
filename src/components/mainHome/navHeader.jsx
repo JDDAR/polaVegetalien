@@ -22,15 +22,16 @@ const NavHeader = () => {
             <section className="stickyHeader__logo">
               <hr />
               <NavLink className="titleHeader" to="/Vegetalien">
-                <h2>
-                  LeVegetalien
-                  <span> au Pola</span>
-                </h2>
+                <h2>LeVegetalien </h2>
+                <span>au Pola</span>
               </NavLink>
               <hr />
             </section>
             <div className="stickyHeader__textNav">
+              {/* 
+
               <p>Pâtisserie traditionnelle française</p>
+              */}
             </div>
             {/*
             <nav className={`stickyHeader__nav ${isOpen && "open"}`}>

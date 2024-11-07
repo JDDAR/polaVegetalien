@@ -2,33 +2,27 @@ import "../../styles/components/specialists/_specialists.scss";
 import TextInfoHome from "../textInfo/textInfoHome";
 import TitleHome from "../titles/titleHome";
 
+import chef03 from "../../assets/img/Specialist/chef03.png";
+
 const Specialists = () => {
   return (
     <>
       <section className="">
         <div className="specialistsContainer">
           <TitleHome
-            title="Art Specialists"
-            titleText="eque porro quisquam est qui dolorem"
+            title=""
+            titleText="Viens me dire que ton estomac travaille et que ton ego restaure le tien "
           />
           <section className="specialistsContainer__content-specialists">
             <div className="specialistsContainer__content-info">
               <TextInfoHome
-                titleText="Nombre del chef "
-                textInfoLeft="Lorem Ipsum es simplemente el texto de relleno de
-                        las imprentas y archivos de texto. Lorem Ipsum ha 
-                        sido el texto de relleno estándar de las industrias
-                        desde el año 1500, cuando un impresor (N. del T. 
-                        persona que se dedica a la imprenta) desconocido 
-                        usó una galería de textos y los mezcló de tal "
+                titleText='" Je adore le chocolat "'
+                textInfoLeft="Chef Felipe"
               />
             </div>
             <div className="specialistsContainer__specialists-img">
               <span>
-                <img
-                  src="https://images.pexels.com/photos/784633/pexels-photo-784633.jpeg"
-                  alt=""
-                />
+                <img src={chef03} alt="" />
               </span>
             </div>
           </section>

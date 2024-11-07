@@ -9,6 +9,7 @@
   border-radius: 6px;
   position: relative;
   padding: 8px;
+  background: v.$color-BG-primary;
   &:hover {
     box-shadow:
       rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -32,9 +33,11 @@
     display: flex;
     flex-direction: column;
     font-family: v.$font-family-text;
+    gap: 8px;
     h2 {
       color: v.$color-font-primary;
       font-size: 18px;
+      margin-top: 15px;
     }
     span {
       font-size: 12px;
@@ -59,7 +62,9 @@
     font-size: 1em;
     color: v.$color-primary;
     cursor: pointer;
-    border: none;
+    border: 1px solid v.$color-primary;
+    padding: 5px 10px;
+    text-align: center;
     font-weight: 800;
     background: none;
   }
@@ -117,6 +122,12 @@
         font-weight: 100;
       }
     }
+    a {
+      margin-top: 15px;
+      padding: 15px 5px;
+      text-decoration: none;
+      @include b.buttonPrimary();
+    }
   }
 
   .close {
@@ -127,5 +138,16 @@
     font-weight: 800;
     color: v.$color-primary;
     cursor: pointer;
+  }
+}
+@media (max-width: 1200px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .modal-content {
+    flex-direction: column;
+    height: auto;
   }
 }

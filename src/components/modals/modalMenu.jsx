@@ -52,15 +52,15 @@ const ModalMenu = () => {
             <div className="imgContainer">
               <div className="gradientImg"></div>
               <img
-                src="https://images.pexels.com/photos/2693448/pexels-photo-2693448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://images.pexels.com/photos/3081657/pexels-photo-3081657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt=""
               />
             </div>
             <div className="menuModalInfo">
-              <h3>Tarts</h3>
+              <h3>Pettit</h3>
               {productsData
                 .filter((type) => {
-                  return type.type === "tarts";
+                  return type.type === "pettit";
                 })
                 .map((type) => (
                   <ul key={type.id}>
@@ -69,7 +69,7 @@ const ModalMenu = () => {
                 ))}
             </div>
             <div className="menuHover">
-              <NavLink to="/Vegetalien/menu/tarts" className="buttonMenuModal">
+              <NavLink to="/Vegetalien/menu/pettit" className="buttonMenuModal">
                 {" "}
                 Saber mas
               </NavLink>
@@ -81,15 +81,15 @@ const ModalMenu = () => {
             <div className="imgContainer">
               <div className="gradientImg"></div>
               <img
-                src="https://images.pexels.com/photos/1190165/pexels-photo-1190165.jpeg"
+                src="https://images.pexels.com/photos/8365696/pexels-photo-8365696.jpeg"
                 alt=""
               />
             </div>
             <div className="menuModalInfo">
-              <h3>Drinks</h3>
+              <h3>Eclairs</h3>
               {productsData
                 .filter((type) => {
-                  return type.type === "drinks";
+                  return type.type === "eclair";
                 })
                 .map((type) => (
                   <ul key={type.id}>
@@ -98,7 +98,7 @@ const ModalMenu = () => {
                 ))}
             </div>
             <div className="menuHover">
-              <NavLink to="/Vegetalien/menu/drinks" className="buttonMenuModal">
+              <NavLink to="/Vegetalien/menu/eclair" className="buttonMenuModal">
                 {" "}
                 Saber mas
               </NavLink>
@@ -142,15 +142,15 @@ const ModalMenu = () => {
             <div className="imgContainer">
               <div className="gradientImg"></div>
               <img
-                src="https://images.pexels.com/photos/3081657/pexels-photo-3081657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://images.pexels.com/photos/2693448/pexels-photo-2693448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt=""
               />
             </div>
             <div className="menuModalInfo">
-              <h3>Pettit</h3>
+              <h3>Tarts</h3>
               {productsData
                 .filter((type) => {
-                  return type.type === "pettit";
+                  return type.type === "tarts";
                 })
                 .map((type) => (
                   <ul key={type.id}>
@@ -159,7 +159,7 @@ const ModalMenu = () => {
                 ))}
             </div>
             <div className="menuHover">
-              <NavLink to="/Vegetalien/menu/pettit" className="buttonMenuModal">
+              <NavLink to="/Vegetalien/menu/tarts" className="buttonMenuModal">
                 {" "}
                 Saber mas
               </NavLink>
@@ -172,15 +172,15 @@ const ModalMenu = () => {
             <div className="imgContainer">
               <div className="gradientImg"></div>
               <img
-                src="https://images.pexels.com/photos/8365696/pexels-photo-8365696.jpeg"
+                src="https://images.pexels.com/photos/1190165/pexels-photo-1190165.jpeg"
                 alt=""
               />
             </div>
             <div className="menuModalInfo">
-              <h3>Eclairs</h3>
+              <h3>Drinks</h3>
               {productsData
                 .filter((type) => {
-                  return type.type === "eclair";
+                  return type.type === "drinks";
                 })
                 .map((type) => (
                   <ul key={type.id}>
@@ -189,7 +189,7 @@ const ModalMenu = () => {
                 ))}
             </div>
             <div className="menuHover">
-              <NavLink to="/Vegetalien/menu/eclair" className="buttonMenuModal">
+              <NavLink to="/Vegetalien/menu/drinks" className="buttonMenuModal">
                 {" "}
                 Saber mas
               </NavLink>

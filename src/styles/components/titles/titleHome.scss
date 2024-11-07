@@ -22,8 +22,17 @@
   span {
     font-family: v.$font-family-text;
     font-weight: 200;
-    font-size: 12px;
+    font-size: 1.5rem;
     margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .titleHome {
+    width: 90%;
+    h2 {
+      font-size: 1.8rem;
+    }
   }
 }
 

@@ -4,16 +4,17 @@
 .textInfoHome {
   position: relative;
   h2 {
-    font-size: 35px;
+    font-size: 2.5rem;
     font-weight: 200;
-    margin-bottom: 65px;
+    margin-bottom: 5px;
   }
   p {
     font-family: v.$font-family-text;
     font-size: 15px;
     font-weight: 300;
-    line-height: 150%;
-    margin-bottom: 65px;
+    margin-bottom: 15px;
+    margin-left: 60%;
+    position: relative;
   }
   a {
     display: none;
@@ -21,5 +22,21 @@
     @include b.buttonPrimary();
     width: auto;
     box-shadow: v.$box-shadow;
+  }
+}
+@media (max-width: 1000px) {
+  .textInfoHome {
+    text-align: end;
+    h2 {
+      font-size: 1.7rem;
+    }
+    p {
+      font-family: v.$font-family-text;
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom: 15px;
+      margin-left: 0;
+      position: relative;
+    }
   }
 }
