@@ -199,6 +199,11 @@
         box-shadow: v.$box-shadow;
       }
     }
+    .menuHover {
+      display: none;
+      width: 50%;
+      margin: auto;
+    }
     .buttonMenuModal-responsive {
       position: absolute;
       right: 15px;
@@ -213,6 +218,7 @@
       @include b.buttonPrimary();
       border: none;
       box-shadow: v.$box-shadow;
+      z-index: 1;
     }
   }
 }
