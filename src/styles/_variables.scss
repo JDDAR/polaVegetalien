@@ -10,13 +10,16 @@ $font-family-title: "Hurricane", cursive;
 //colors
 
 $color-primary: #ffb5bf;
-$color-font-primary: #1b2021;
+//$color-primary: #e973a2;
+//$color-primary: #fc9cc3;
+//$color-font-primary: #1b2021;
+$color-font-primary: #303030;
 $color-BG-primary: #fdfbf9;
 
 //Modals
 
 $color-BG-modals: rgba(0, 0, 0, 0.49);
-$color-BG-hover-menu: rgba(255, 255, 255, 0.5);
+$color-BG-hover-menu: rgba($color-BG-primary, 0.2);
 
 //sombras
 

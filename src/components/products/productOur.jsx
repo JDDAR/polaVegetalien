@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "../../styles/components/products/productsOur.scss";
 
+import { FaWhatsapp } from "react-icons/fa";
+import { AiFillEye } from "react-icons/ai";
+
 const ProductOur = ({ products }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -29,16 +32,14 @@ const ProductOur = ({ products }) => {
           <div className="productContainer__product-info">
             <h2>{product.title}</h2>
             <span>{product.type}</span>
+            <button
+              className="buttonModalProducts"
+              onClick={() => openModal(product)}
+            >
+              <AiFillEye />
+            </button>
             <section className="productContainer__product-price">
               <span></span>
-              <span>
-                <button
-                  className="buttonModalProducts"
-                  onClick={() => openModal(product)}
-                >
-                  Ver
-                </button>
-              </span>
             </section>
           </div>
         </section>
@@ -66,7 +67,7 @@ const ProductOur = ({ products }) => {
                 rel="noopener noreferrer"
                 className="buttonPrimary"
               >
-                Contactar Por whatsapp
+                <FaWhatsapp />
               </a>
             </div>
           </div>

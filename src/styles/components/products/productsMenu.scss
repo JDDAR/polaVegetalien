@@ -1,7 +1,7 @@
 @use "../../variables" as v;
 
 .productMenu {
-  width: 100%;
+  width: 46%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -47,5 +47,21 @@
       font-size: 0.9rem;
       text-decoration: none;
     }
+  }
+}
+
+@media (max-width: 899px) {
+  .productMenu {
+    width: 45%;
+  }
+}
+@media (max-width: 799px) {
+  .productMenu {
+    width: 44%;
+  }
+}
+@media (max-width: 699px) {
+  .productMenu {
+    width: 100%;
   }
 }

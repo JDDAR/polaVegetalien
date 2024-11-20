@@ -12,12 +12,12 @@
     border: none;
     padding: 10px 35px;
     border-radius: 6px;
-    &:visited {
-      background: red;
-    }
+    background: none;
+    border: 1px solid rgba(v.$color-primary, 0.3);
   }
   .active {
     background: v.$color-primary;
+    color: v.$color-BG-primary;
   }
 }
 @media (max-width: 720px) {
@@ -42,24 +42,25 @@
 
   button {
     background: transparent;
-    border: 1px solid v.$color-primary; // Ajusta el color según tus variables
-    color: v.$color-primary; // Ajusta el color según tus variables
+    border: 1px solid v.$color-primary;
+    color: v.$color-primary;
     padding: 5px 10px;
     cursor: pointer;
     transition:
       background-color 0.3s,
       color 0.3s;
-    font-size: 1rem; // Ajusta el tamaño de la fuente según sea necesario
+    font-size: 1rem;
+    border-radius: 3px;
 
     &:hover {
-      background-color: v.$color-primary; // Ajusta el color según tus variables
-      color: v.$color-BG-primary; // Ajusta el color según tus variables
+      background-color: v.$color-primary;
+      color: v.$color-BG-primary;
     }
 
     &.active {
-      background-color: v.$color-primary; // Ajusta el color según tus variables
-      color: v.$color-BG-primary; // Ajusta el color según tus variables
-      font-weight: bold; // Resalta el botón activo
+      background-color: v.$color-primary;
+      color: v.$color-BG-primary;
+      font-weight: bold;
     }
   }
 }

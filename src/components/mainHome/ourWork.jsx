@@ -44,10 +44,7 @@ const OurWork = () => {
   return (
     <section className="container">
       <div className="ourWorkContainer">
-        <TitleHome
-          title="Our Work"
-          titleText="eque porro quisquam est qui dolorem"
-        />
+        <TitleHome title="Our Work" titleText="" />
 
         <ButtonFilter
           menuButtons={menuButtons}

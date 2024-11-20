@@ -2,9 +2,9 @@ import {
   RiFacebookFill,
   RiInstagramFill,
   RiWhatsappFill,
-  RiTwitterFill,
 } from "react-icons/ri";
 import "../../styles/components/buttons/social.scss";
+import { FaXTwitter } from "react-icons/fa6";
 
 const SocialButtons = ({ social }) => {
   return (
@@ -39,7 +39,7 @@ const SocialButtons = ({ social }) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiTwitterFill className="socialIcon" />
+        <FaXTwitter className="socialIcon" />
       </a>
     </section>
   );

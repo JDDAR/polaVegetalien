@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { closeModalMenu } from "../../features/modals/modalMenuSlice";
 import "../../styles/components/modals/modalMenu.scss";
 
+import { GoPlusCircle } from "react-icons/go";
 const ModalMenu = () => {
   const { productsData } = useSelector((store) => store.productsData);
   const dispath = useDispatch();
@@ -40,8 +41,7 @@ const ModalMenu = () => {
                 to="/Vegetalien/menu/macarons"
                 className="buttonMenuModal"
               >
-                {" "}
-                Saber mas
+                <GoPlusCircle />
               </NavLink>
             </div>
           </article>
@@ -71,7 +71,7 @@ const ModalMenu = () => {
             <div className="menuHover">
               <NavLink to="/Vegetalien/menu/pettit" className="buttonMenuModal">
                 {" "}
-                Saber mas
+                <GoPlusCircle />
               </NavLink>
             </div>
           </article>
@@ -100,7 +100,7 @@ const ModalMenu = () => {
             <div className="menuHover">
               <NavLink to="/Vegetalien/menu/eclair" className="buttonMenuModal">
                 {" "}
-                Saber mas
+                <GoPlusCircle />
               </NavLink>
             </div>
           </article>
@@ -132,7 +132,7 @@ const ModalMenu = () => {
                 className="buttonMenuModal"
               >
                 {" "}
-                Saber mas
+                <GoPlusCircle />
               </NavLink>
             </div>
           </article>
@@ -161,7 +161,7 @@ const ModalMenu = () => {
             <div className="menuHover">
               <NavLink to="/Vegetalien/menu/tarts" className="buttonMenuModal">
                 {" "}
-                Saber mas
+                <GoPlusCircle />
               </NavLink>
             </div>
           </article>
@@ -191,7 +191,7 @@ const ModalMenu = () => {
             <div className="menuHover">
               <NavLink to="/Vegetalien/menu/drinks" className="buttonMenuModal">
                 {" "}
-                Saber mas
+                <GoPlusCircle />
               </NavLink>
             </div>
           </article>
@@ -220,7 +220,7 @@ const ModalMenu = () => {
             <div className="menuHover">
               <NavLink to="/Vegetalien/menu/cakes" className="buttonMenuModal">
                 {" "}
-                Saber mas
+                <GoPlusCircle />
               </NavLink>
             </div>
           </article>
