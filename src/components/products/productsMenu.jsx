@@ -25,7 +25,7 @@ const ProductMenu = (props) => {
             </div>
             <div className="productMenu__button">
               <a
-                href={`https://wa.me/3123250664?text=${encodeURIComponent(`Hola, me interesa el producto ${info.title} de tipo ${info.type}`)}`}
+                href={`https://wa.me/3213120825?text=${encodeURIComponent(`Hola, me interesa el producto ${info.title} de tipo ${info.type}`)}`}
                 className="productMenu__button__price"
               >
                 contactar
