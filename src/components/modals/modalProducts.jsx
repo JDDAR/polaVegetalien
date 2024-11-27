@@ -9,7 +9,7 @@ const ModalProducts = () => {
 
   if (!isOpen || !selectedProduct) return null;
 
-  const whatsappNumber = "3123250664"; // Reemplaza con el número de WhatsApp
+  const whatsappNumber = "573123250664"; // Reemplaza con el número de WhatsApp
   const whatsappMessage = `Hola, me interesa el producto ${selectedProduct.title} de tipo ${selectedProduct.type}`;
 
   return (

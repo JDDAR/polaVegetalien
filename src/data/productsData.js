@@ -78,31 +78,31 @@ const productsData = [
     id: 8,
     title: "Piña",
     price: 800,
-    img: "https://images.pexels.com/photos/19490384/pexels-photo-19490384/free-photo-of-colorido-de-colores-dulce-crema.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.unsplash.com/photo-1613992612826-b799b2458dff?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     amount: 1,
     type: "eclair",
     description:
-      "Una variante tropical del eclair, relleno de una crema suave de piña y cubierto con trozos de piña caramelizada. Perfecto para quienes buscan una opción más afrutada.",
+      "Este eclair tropical está relleno de una delicada crema de piña que captura el equilibrio perfecto entre dulzura y acidez. Coronado con un glaseado brillante y pequeños trozos de piña caramelizada que intensifican su frescura.",
   },
   {
     id: 8,
     title: "Maracuya",
     price: 800,
-    img: "https://images.pexels.com/photos/19490384/pexels-photo-19490384/free-photo-of-colorido-de-colores-dulce-crema.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.unsplash.com/photo-1643136364310-3aa870f4f3f1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     amount: 1,
     type: "eclair",
     description:
-      "Una variante tropical del eclair, relleno de una crema suave de piña y cubierto con trozos de piña caramelizada. Perfecto para quienes buscan una opción más afrutada.",
+      "Un eclair refrescante con un relleno cremoso de maracuyá, que ofrece un sabor cítrico y exótico. Su cobertura de glaseado suave resalta la acidez vibrante del fruto, ideal para quienes buscan una experiencia dulce y tropical.",
   },
   {
     id: 8,
     title: "Frambuesa",
     price: 800,
-    img: "https://images.pexels.com/photos/19490384/pexels-photo-19490384/free-photo-of-colorido-de-colores-dulce-crema.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.unsplash.com/photo-1567266231925-e5525a582655?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     amount: 1,
     type: "eclair",
     description:
-      "Una variante tropical del eclair, relleno de una crema suave de piña y cubierto con trozos de piña caramelizada. Perfecto para quienes buscan una opción más afrutada.",
+      "Relleno de una crema suave de frambuesa, este eclair combina el dulzor natural de la fruta con un toque de acidez. Adornado con un glaseado rosado brillante y pedacitos de frambuesa liofilizada, es perfecto para los amantes de los sabores frutales intensos.",
   },
 
   /*-------------Cakes -----------*/
