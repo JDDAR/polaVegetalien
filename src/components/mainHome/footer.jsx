@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <h2>LEVEGETALIEN</h2>
+        <h2>Le végétalien</h2>
         <div className="container">
           <div className="footerContent">
             <section className="footerContent__info">

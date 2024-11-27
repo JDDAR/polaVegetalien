@@ -25,6 +25,7 @@
 
 @media (max-width: 800px) {
   .ourWorkContainer {
+    margin-top: 50px;
     &__productsOur {
       grid-template-columns: repeat(2, 1fr);
     }

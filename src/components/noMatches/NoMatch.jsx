@@ -1,7 +1,5 @@
 const NoMath = () => {
+  return <div>La pagina no existe </div>;
+};
 
-    return <div>Page nor fount</div>
-
-}
-
-export default NoMath
+export default NoMath;

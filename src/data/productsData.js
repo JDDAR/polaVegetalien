@@ -11,14 +11,15 @@ const productsData = [
   },
   {
     id: 2,
-    title: "Pan de Chocolate",
+    title: "Pain au Chocolat",
     price: 90,
-    img: "https://images.pexels.com/photos/6829492/pexels-photo-6829492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/8909323/pexels-photo-8909323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "boulangerie",
     description:
-      "Una variante deliciosa del croissant, rellena con una barra de chocolate negro. Cada bocado ofrece una combinación perfecta de masa hojaldrada y chocolate fundido, ideal para una merienda o desayuno indulgente",
+      "Explora la diferencia entre nuestras dos versiones del pan de chocolate. El 'pan au chocolat', elaborado con masa hojaldrada tradicional, y el 'pan abu chocolat', con una técnica de preparación diferente que resalta un sabor más profundo y una textura más esponjosa.",
   },
+
   {
     id: 3,
     title: "Paris-Brest",
@@ -29,15 +30,16 @@ const productsData = [
     description:
       "Inspirado en la clásica tarta francesa, nuestro Paris-Brest es una rueda de masa choux rellena de crema de praliné de avellanas, con almendras tostadas en la parte superior, creando una combinación de texturas y sabores inigualables.",
   },
+
   {
     id: 4,
     title: "Pan de Chocolate",
     price: 90,
-    img: "https://images.pexels.com/photos/8909323/pexels-photo-8909323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/6829492/pexels-photo-6829492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "boulangerie",
     description:
-      "Explora la diferencia entre nuestras dos versiones del pan de chocolate. El 'pan au chocolat', elaborado con masa hojaldrada tradicional, y el 'pan abu chocolat', con una técnica de preparación diferente que resalta un sabor más profundo y una textura más esponjosa.",
+      "El pan de chocolate,  es un bocado ligero, esponjoso y delicioso, relleno de barras de chocolate y con ganache de chocolate amargo al 70% ",
   },
   {
     id: 5,
@@ -82,6 +84,26 @@ const productsData = [
     description:
       "Una variante tropical del eclair, relleno de una crema suave de piña y cubierto con trozos de piña caramelizada. Perfecto para quienes buscan una opción más afrutada.",
   },
+  {
+    id: 8,
+    title: "Maracuya",
+    price: 800,
+    img: "https://images.pexels.com/photos/19490384/pexels-photo-19490384/free-photo-of-colorido-de-colores-dulce-crema.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    amount: 1,
+    type: "eclair",
+    description:
+      "Una variante tropical del eclair, relleno de una crema suave de piña y cubierto con trozos de piña caramelizada. Perfecto para quienes buscan una opción más afrutada.",
+  },
+  {
+    id: 8,
+    title: "Frambuesa",
+    price: 800,
+    img: "https://images.pexels.com/photos/19490384/pexels-photo-19490384/free-photo-of-colorido-de-colores-dulce-crema.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    amount: 1,
+    type: "eclair",
+    description:
+      "Una variante tropical del eclair, relleno de una crema suave de piña y cubierto con trozos de piña caramelizada. Perfecto para quienes buscan una opción más afrutada.",
+  },
 
   /*-------------Cakes -----------*/
   {
@@ -112,7 +134,7 @@ const productsData = [
     amount: 1,
     type: "cakes",
     description:
-      "Un cheesecake cremoso y suave, sobre una base crujiente de galleta. Disponible en diferentes variedades como clásico, de frutos rojos o con un toque de chocolate blanco, es perfecto para finalizar una comida con un toque dulce",
+      "Disponible en chocolate y mango que son los sabores favoritos de la casa, perfectos para finalizar una comida con un toque dulce. Cada semana un sabor nuevo",
   },
 
   /*------------Pettit------------*/
@@ -169,13 +191,13 @@ const productsData = [
   },
   {
     id: 24,
-    title: "Curuba",
+    title: "Maracuya",
     price: 90,
     img: "https://images.pexels.com/photos/15913636/pexels-photo-15913636/free-photo-of-comida-plato-dulce-pastel.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "tarts",
     description:
-      "Esta tarta exótica presenta una base crujiente y un cremoso relleno de curuba, aportando notas tropicales únicas. Perfecta para quienes buscan algo diferente y refrescante",
+      "Esta tarta exótica presenta una base crujiente y un cremoso relleno de Maracuya, aportando notas tropicales únicas. Perfecta para quienes buscan algo diferente y refrescante",
   },
   {
     id: 25,
@@ -261,13 +283,13 @@ const productsData = [
   },
   {
     id: 29,
-    title: "Curuba",
+    title: "Maracuya",
     price: 90,
     img: "https://images.pexels.com/photos/16946892/pexels-photo-16946892/free-photo-of-macarons-coloridos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     amount: 1,
     type: "macarons",
     description:
-      "Un macaron exótico que captura el sabor distintivo de la curuba, una fruta tropical colombiana. Su relleno de crema suave y aromática aporta notas florales y afrutadas que transportan a un jardín tropical.",
+      "Un macaron exótico que captura el sabor distintivo de la Maracuya. Su relleno de crema suave y aromática aporta notas florales y afrutadas que transportan a un jardín tropical.",
   },
   /*- ------------------------DRINKS--*/
   {

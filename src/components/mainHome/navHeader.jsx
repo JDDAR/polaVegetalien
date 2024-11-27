@@ -22,7 +22,7 @@ const NavHeader = () => {
             <section className="stickyHeader__logo">
               <hr />
               <NavLink className="titleHeader" to="/Vegetalien">
-                <h2>LeVegetalien </h2>
+                <h2>Le végétalien</h2>
                 <span>au Pola</span>
               </NavLink>
               <hr />
