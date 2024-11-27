@@ -18,7 +18,7 @@ const ProductOur = ({ products }) => {
   // Define el número de WhatsApp y construye el mensaje con los detalles del producto
   const getWhatsAppLink = (product) => {
     const whatsappNumber = "573213120825"; // Reemplaza con el número de WhatsApp
-    const message = `Hola, me interesa el producto ${product.title}, de tipo ${product.type}, con un precio de $${product.price}.`;
+    const message = `Hola, me interesa el producto ${product.title}, de tipo ${product.type}`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   };
 
