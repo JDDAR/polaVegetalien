@@ -85,7 +85,7 @@ const productsData = [
       "Este eclair tropical está relleno de una delicada crema de piña que captura el equilibrio perfecto entre dulzura y acidez. Coronado con un glaseado brillante y pequeños trozos de piña caramelizada que intensifican su frescura.",
   },
   {
-    id: 8,
+    id: 9,
     title: "Maracuya",
     price: 800,
     img: "https://images.unsplash.com/photo-1643136364310-3aa870f4f3f1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -95,7 +95,7 @@ const productsData = [
       "Un eclair refrescante con un relleno cremoso de maracuyá, que ofrece un sabor cítrico y exótico. Su cobertura de glaseado suave resalta la acidez vibrante del fruto, ideal para quienes buscan una experiencia dulce y tropical.",
   },
   {
-    id: 8,
+    id: 10,
     title: "Frambuesa",
     price: 800,
     img: "https://images.unsplash.com/photo-1567266231925-e5525a582655?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -139,7 +139,7 @@ const productsData = [
 
   /*------------Pettit------------*/
   {
-    id: 17,
+    id: 14,
     title: "BonBon",
     price: 90,
     img: "https://images.pexels.com/photos/15420473/pexels-photo-15420473/free-photo-of-comida-dulce-papel-bandeja.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -149,7 +149,7 @@ const productsData = [
       "Pequeñas delicias de chocolate rellenas con ganache de diferentes sabores, desde frambuesa hasta caramelo salado. Cada bonbon está recubierto de una fina capa de chocolate brillante, para un acabado perfecto.",
   },
   {
-    id: 18,
+    id: 15,
     title: "Chocolate Barras",
     price: 90,
     img: "https://images.pexels.com/photos/4110088/pexels-photo-4110088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -160,7 +160,7 @@ const productsData = [
   },
   /*-----------------Tarts-----------*/
   {
-    id: 21,
+    id: 16,
     title: "Chocolate",
     price: 90,
     img: "https://images.pexels.com/photos/691152/pexels-photo-691152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -170,7 +170,7 @@ const productsData = [
       "Una tarta lujosa con una base de masa crujiente y un rico relleno de ganache de chocolate oscuro, elaborado con cacao de la mejor calidad. Cada porción ofrece una textura suave y aterciopelada, ideal para un deleite con café o té.",
   },
   {
-    id: 22,
+    id: 17,
     title: "Black and White (Especial de la casa)",
     price: 90,
     img: "https://images.pexels.com/photos/8670439/pexels-photo-8670439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -180,7 +180,7 @@ const productsData = [
       "Nuestra tarta estrella, una combinación perfecta de chocolate blanco y negro en capas que alternan sobre una base crujiente. Cada bocado es un equilibrio de sabores y texturas, con un contraste entre la dulzura del chocolate blanco y la profundidad del negro.",
   },
   {
-    id: 23,
+    id: 18,
     title: "Frambuesa",
     price: 90,
     img: "https://images.pexels.com/photos/17402675/pexels-photo-17402675/free-photo-of-comida-plato-postre-pastel.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -190,7 +190,7 @@ const productsData = [
       "Una tarta fresca con un relleno de crema de frambuesa vibrante, cubierta con frambuesas frescas. Su base crocante complementa la acidez de la fruta, creando una experiencia afrutada y refrescante.",
   },
   {
-    id: 24,
+    id: 19,
     title: "Maracuya",
     price: 90,
     img: "https://images.pexels.com/photos/15913636/pexels-photo-15913636/free-photo-of-comida-plato-dulce-pastel.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -200,7 +200,7 @@ const productsData = [
       "Esta tarta exótica presenta una base crujiente y un cremoso relleno de Maracuya, aportando notas tropicales únicas. Perfecta para quienes buscan algo diferente y refrescante",
   },
   {
-    id: 25,
+    id: 20,
     title: "Mango",
     price: 90,
     img: "https://images.pexels.com/photos/2335682/pexels-photo-2335682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -210,7 +210,7 @@ const productsData = [
       "Una tarta de mango que combina la dulzura de la fruta madura con un relleno cremoso y suave. Su base ligera y crocante equilibra la textura y el sabor, haciendo de esta tarta un deleite tropical.",
   },
   {
-    id: 26,
+    id: 21,
     title: "Arequipe",
     price: 90,
     img: "https://images.pexels.com/photos/19244738/pexels-photo-19244738/free-photo-of-azucar-postre-dulce-delicioso.jpeg",
@@ -220,7 +220,7 @@ const productsData = [
       "Una deliciosa tarta de arequipe con una base crujiente que se deshace en la boca, rellena de un dulce y cremoso arequipe colombiano. Su sabor caramelizado ofrece un placer dulce irresistible.",
   },
   {
-    id: 27,
+    id: 22,
     title: "Cereza",
     price: 90,
     img: "https://images.pexels.com/photos/1282279/pexels-photo-1282279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -230,7 +230,7 @@ const productsData = [
       "Una tarta delicada con un relleno de cerezas maceradas en su jugo natural, cubierta con una fina capa de glaseado de cereza. La base de masa crujiente complementa la jugosidad y la dulzura de las cerezas.",
   },
   {
-    id: 28,
+    id: 23,
     title: "Fresa",
     price: 90,
     img: "https://images.pexels.com/photos/4748359/pexels-photo-4748359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -242,7 +242,7 @@ const productsData = [
 
   /*..-------------Macarons_----------------*/
   {
-    id: 25,
+    id: 24,
     title: "Chocolate",
     price: 90,
     img: "https://images.pexels.com/photos/8718009/pexels-photo-8718009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -252,7 +252,7 @@ const productsData = [
       "Un macaron elaborado con una delicada mezcla de almendra molida y cacao puro, relleno con una ganache de chocolate negro. Su textura crujiente por fuera y suave por dentro crea una experiencia rica e indulgente para los amantes del chocolate. ",
   },
   {
-    id: 26,
+    id: 25,
     title: "Black and White (Especial de la casa)",
     price: 90,
     img: "https://images.pexels.com/photos/7296682/pexels-photo-7296682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -262,7 +262,7 @@ const productsData = [
       "Este macaron especial de la casa presenta un contraste visual y de sabor único, con capas de chocolate blanco y negro que se funden en el paladar. Su relleno de ganache aterciopelada equilibra la dulzura del chocolate blanco con la intensidad del chocolate negro, ofreciendo un deleite sofisticado.",
   },
   {
-    id: 27,
+    id: 26,
     title: "Frambuesa",
     price: 90,
     img: "https://images.pexels.com/photos/13344223/pexels-photo-13344223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -272,7 +272,7 @@ const productsData = [
       "Un macaron refrescante y afrutado, con un delicado relleno de crema de frambuesa hecho con fruta fresca. La acidez natural de la frambuesa se equilibra con un toque de dulzura, proporcionando un sabor vibrante y aromático.",
   },
   {
-    id: 28,
+    id: 27,
     title: "Yuzu",
     price: 90,
     img: "https://images.pexels.com/photos/15898637/pexels-photo-15898637/free-photo-of-dulce-galletas-delicioso-fotografia-de-comida.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -282,7 +282,7 @@ const productsData = [
       "Inspirado en la fruta cítrica asiática, el macaron de yuzu ofrece una combinación perfecta desabores ácidos y dulces. El relleno cremoso de yuzu destaca por su frescura, recordando a limón pero con un perfil más complejo y aromático.",
   },
   {
-    id: 29,
+    id: 28,
     title: "Maracuya",
     price: 90,
     img: "https://images.pexels.com/photos/16946892/pexels-photo-16946892/free-photo-of-macarons-coloridos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -293,7 +293,7 @@ const productsData = [
   },
   /*- ------------------------DRINKS--*/
   {
-    id: 30,
+    id: 29,
     title: "Té de Flor de Jamaica",
     price: 90,
     img: "https://images.pexels.com/photos/5946806/pexels-photo-5946806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -303,7 +303,7 @@ const productsData = [
       "Una infusión de flor de jamaica de color rubí, conocida por sus propiedades antioxidantes y su sabor ligeramente ácido. Puede disfrutarse caliente o fría, ideal para refrescarse y revitalizarse a cualquier hora del día",
   },
   {
-    id: 31,
+    id: 30,
     title: "Chocolate Caliente",
     price: 90,
     img: "https://images.pexels.com/photos/19271883/pexels-photo-19271883/free-photo-of-navidad-pasteles-y-chocolate-caliente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -313,7 +313,7 @@ const productsData = [
       "Un chocolate caliente espeso y cremoso, hecho con cacao puro y un toque especial de brownie en el fondo. Su textura densa y su sabor intenso hacen de esta bebida una experiencia reconfortante para los amantes del chocolate",
   },
   {
-    id: 32,
+    id: 31,
     title: "Té de Jengibre",
     price: 90,
     img: "https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg",
@@ -323,7 +323,7 @@ const productsData = [
       "Una infusión de jengibre fresco, con notas picantes y cítricas, ideal para revitalizar el cuerpo y la mente. Perfecto para disfrutar caliente, especialmente en los días fríos, o como acompañante de los postres del menú.",
   },
   {
-    id: 33,
+    id: 32,
     title: "Café Americano y Espresso",
     price: 90,
     img: "https://images.pexels.com/photos/27548812/pexels-photo-27548812/free-photo-of-naturaleza-cafeina-cafe-relajacion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
