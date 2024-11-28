@@ -48,7 +48,7 @@ export const menuSpecificData = [
   {
     id: 6,
     img_URL:
-      "https://images.pexels.com/photos/17379772/pexels-photo-17379772/free-photo-of-restaurante-cena-cafeteria-mesa.jpeg?auto=compress&cs=tinysrgb&w=2100&h=1920&dpr=1",
+      "https://images.pexels.com/photos/6970501/pexels-photo-6970501.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     type: "eclair",
     description:
       "Eclairs rellenos de cremas suaves y deliciosas. Una opción perfecta para los amantes de los postres clásicos con un toque moderno.",
