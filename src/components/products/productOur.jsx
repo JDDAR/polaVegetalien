@@ -15,7 +15,6 @@ const ProductOur = ({ products }) => {
     setSelectedProduct(null);
   };
 
-  // Define el número de WhatsApp y construye el mensaje con los detalles del producto
   const getWhatsAppLink = (product) => {
     const whatsappNumber = "573213120825"; // Reemplaza con el número de WhatsApp
     const message = `Hola, me interesa el producto ${product.title}, de tipo ${product.type}`;
@@ -57,10 +56,10 @@ const ProductOur = ({ products }) => {
             <div className="modal-content-info">
               <div className="modal-content-info-titleDescripcion">
                 <h2>{selectedProduct.title}</h2>
+              </div>
+              <div className="modal-content-info__description">
                 <p>{selectedProduct.description}</p>
               </div>
-              <span></span>
-              {/* Botón para redirigir a WhatsApp */}
               <a
                 href={getWhatsAppLink(selectedProduct)}
                 target="_blank"

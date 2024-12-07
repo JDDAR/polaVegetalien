@@ -4,7 +4,7 @@
 .socialHeader {
   display: flex;
   left: 200px;
-  gap: 5px;
+  gap: 10px;
 
   // Estilo de los enlaces dentro del contenedor
   a {
@@ -13,14 +13,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30px; // Tamaño del botón ajustado
-    width: 30px; // Tamaño del botón ajustado
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     border: 1px solid v.$color-BG-primary;
     box-shadow: v.$box-shadow;
 
     .socialIcon {
-      font-size: 16px; // Tamaño de icono ajustado
+      font-size: 0.9rem;
       color: v.$color-BG-primary;
     }
   }
@@ -29,7 +29,7 @@
 // Estilos para el contenedor de los botones sociales en otras ubicaciones
 .social {
   width: 100%;
-  position: absolute; // Oposición a fixed en .socialHeader
+  position: absolute;
   z-index: 2;
   display: flex;
   justify-content: space-evenly;
@@ -42,8 +42,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30px; // Tamaño del botón ajustado
-    width: 30px; // Tamaño del botón ajustado
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     border: 1px solid v.$color-BG-primary;
     box-shadow: v.$box-shadow;

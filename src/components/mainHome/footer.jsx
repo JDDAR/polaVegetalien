@@ -24,7 +24,10 @@ const Footer = () => {
           </div>
         </div>
         <span className="footer__copy">
-          &copy; 2023 - <a href="#">Contact</a>
+          &copy; 2023 -
+          <a href="https://github.com/JDDAR" target="_blank" rel="noreferrer">
+            Contact
+          </a>
         </span>
       </footer>
     </>
