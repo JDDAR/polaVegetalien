@@ -1,25 +1,27 @@
-import {useSelector} from "react-redux"
-import {Routes, Route} from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Routes, Route } from "react-router-dom";
 
-import MainHome from "./components/mainHome"
+import MainHome from "./components/mainHome";
 import MenuSpecific from "./components/menuSpecific/menuSpecific";
-import ModalMenu from "./components/modals/modalMenu"
+import ModalMenu from "./components/modals/modalMenu";
 import NoMath from "./components/noMatches/NoMatch";
 
-
 function App() {
-  const {isOpen} = useSelector((store) => store.modalMenu);
+  const { isOpen } = useSelector((store) => store.modalMenu);
   return (
     <>
       {isOpen && <ModalMenu />}
       <Routes>
         <Route>
-          <Route path="/Vegetalien" element = { <MainHome /> } />
-          <Route path="/vegetalien/menu/:menuSpecific" element={ <MenuSpecific />} />
+          <Route path="/" element={<MainHome />} />
+          <Route
+            path="/vegetalien/menu/:menuSpecific"
+            element={<MenuSpecific />}
+          />
           <Route path="*" element={<NoMath />} />
         </Route>
-    </Routes>
+      </Routes>
     </>
-  )
+  );
 }
-export default App
+export default App;
