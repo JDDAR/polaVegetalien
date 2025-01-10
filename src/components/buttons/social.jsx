@@ -18,7 +18,7 @@ const SocialButtons = ({ social }) => {
         <RiFacebookFill className="socialIcon" />
       </a>
       <a
-        href="https://www.instagram.com"
+        href="https://www.instagram.com/levegetalien/"
         aria-label="Instagram"
         target="_blank"
         rel="noopener noreferrer"
@@ -26,7 +26,7 @@ const SocialButtons = ({ social }) => {
         <RiInstagramFill className="socialIcon" />
       </a>
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/573213120825"
         aria-label="WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
