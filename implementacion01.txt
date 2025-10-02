@@ -1,0 +1,251 @@
+
+Guía de Implementación 01: Sistema de Login de Administrador y Configuración de Entorno
+=====================================================================================
+
+## Objetivo
+
+Implementar un sistema de autenticación seguro para un rol de "Administrador". La implementación abarca desde la creación de un backend serverless y componentes de frontend en React, hasta la configuración de los entornos de desarrollo local y de producción para asegurar un funcionamiento consistente.
+
+---
+
+### Paso 1: Configuración de Credenciales Seguras en Vercel
+
+**Objetivo:** Evitar exponer datos sensibles (usuarios, contraseñas) en el código fuente. Se utilizan Variables de Entorno de Vercel, la práctica estándar de la industria.
+
+**Acción Realizada:**
+Se configuraron dos variables de entorno directamente en el panel del proyecto en Vercel (`Settings > Environment Variables`):
+1.  **`ADMIN_USER`**: Almacena el nombre de usuario del administrador.
+2.  **`ADMIN_PASSWORD`**: Almacena la contraseña del administrador.
+
+Estas variables son accesibles en el entorno de ejecución de Vercel a través de `process.env`.
+
+---
+
+### Paso 2: Creación del Endpoint de API para Autenticación
+
+**Objetivo:** Crear un backend serverless que se encargue de validar las credenciales de forma segura.
+
+**Acción Realizada:**
+Se creó un archivo en la carpeta `api/`, que Vercel interpreta automáticamente como un endpoint de API.
+
+*   **Archivo:** `api/login.js`
+*   **Código:**
+    ```javascript
+    // api/login.js
+    export default function handler(request, response) {
+      // 1. Se valida que el método de la petición sea POST.
+      if (request.method !== 'POST') {
+        return response.status(405).json({ message: 'Método no permitido' });
+      }
+
+      // 2. Se extraen las credenciales del cuerpo de la petición.
+      const { username, password } = request.body;
+
+      // 3. Se leen las credenciales seguras desde las Variables de Entorno.
+      const adminUser = process.env.ADMIN_USER;
+      const adminPassword = process.env.ADMIN_PASSWORD;
+
+      // 4. Se valida la existencia de todas las credenciales.
+      if (!username || !password || !adminUser || !adminPassword) {
+        return response.status(400).json({ message: 'Faltan credenciales o el servidor no está configurado.' });
+      }
+
+      // 5. Se comparan las credenciales.
+      if (username === adminUser && password === adminPassword) {
+        // 6. Si son correctas, se devuelve un estado 200 (OK).
+        return response.status(200).json({ message: 'Autenticación exitosa' });
+      } else {
+        // 7. Si son incorrectas, se devuelve un estado 401 (No Autorizado).
+        return response.status(401).json({ message: 'Credenciales inválidas' });
+      }
+    }
+    ```
+
+---
+
+### Paso 3: Creación de la Infraestructura de Frontend
+
+**Objetivo:** Construir la interfaz de usuario para el login y establecer una arquitectura de frontend escalable.
+
+**Acción 3.A: Cliente Axios Centralizado**
+Se creó una instancia de Axios pre-configurada para centralizar la comunicación con el API.
+
+*   **Archivo:** `src/services/api.js`
+*   **Código:**
+    ```javascript
+    // src/services/api.js
+    import axios from 'axios';
+
+    const apiClient = axios.create({
+      baseURL: '/api', // Prefijo para todas las llamadas al API.
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+
+    export default apiClient;
+    ```
+
+**Acción 3.B: Página de Login (Componente React)**
+Se creó el formulario de login, aplicando una estructura de carpetas por funcionalidad.
+
+*   **Archivo:** `src/components/login/LoginPage.jsx` (Nota: la carpeta `pages` se introdujo después, este componente podría moverse a `src/pages/login/LoginPage.jsx` para mayor consistencia).
+*   **Código:**
+    ```jsx
+    // src/components/login/LoginPage.jsx
+    import { useState } from 'react';
+    import { useNavigate } from 'react-router-dom';
+    import apiClient from '../../services/api'; // Se usa el cliente centralizado.
+
+    export function LoginPage() {
+      const [username, setUsername] = useState('');
+      const [password, setPassword] = useState('');
+      const [error, setError] = useState('');
+      const navigate = useNavigate();
+
+      const handleLogin = async (e) => {
+        e.preventDefault();
+        setError('');
+        try {
+          await apiClient.post('/login', { username, password });
+          sessionStorage.setItem('isAdminAuthenticated', 'true');
+          navigate('/admin');
+        } catch (err) {
+          if (err.response) {
+            setError(err.response.data.message || 'Error al iniciar sesión.');
+          } else {
+            setError('No se pudo conectar con el servidor.');
+          }
+        }
+      };
+
+      return (
+        <div style={{ padding: '50px', textAlign: 'center' }}>
+          <h2>Acceso de Administrador</h2>
+          <form onSubmit={handleLogin}>
+            {/* ... JSX del formulario ... */}
+          </form>
+        </div>
+      );
+    }
+    ```
+
+---
+
+### Paso 4: Creación de Páginas y Rutas Protegidas
+
+**Objetivo:** Crear la página de destino del administrador y un "guardia" para protegerla de accesos no autorizados. Se adoptó una estructura que distingue entre `pages` (páginas completas) y `components` (componentes reutilizables).
+
+**Acción 4.A: Página de Administrador**
+*   **Archivo:** `src/pages/admin/AdminPage.jsx`
+*   **Código:**
+    ```jsx
+    // src/pages/admin/AdminPage.jsx
+    import { useNavigate } from 'react-router-dom';
+
+    export function AdminPage() {
+      const navigate = useNavigate();
+      const handleLogout = () => {
+        sessionStorage.removeItem('isAdminAuthenticated');
+        navigate('/login');
+      };
+
+      return (
+        <div style={{ padding: '50px', textAlign: 'center' }}>
+          <h1>¡Bienvenido, Admin!</h1>
+          <p>Esta es tu página de administración.</p>
+          <button onClick={handleLogout}>Cerrar Sesión</button>
+        </div>
+      );
+    }
+    ```
+
+**Acción 4.B: Componente de Ruta Protegida**
+*   **Archivo:** `src/routes/ProtectedRoute.jsx`
+*   **Código:**
+    ```jsx
+    // src/routes/ProtectedRoute.jsx
+    import { Navigate, Outlet } from 'react-router-dom';
+
+    export function ProtectedRoute() {
+      const isAuthenticated = sessionStorage.getItem('isAdminAuthenticated') === 'true';
+      // Si el usuario está autenticado, renderiza la página hija (Outlet).
+      // Si no, lo redirige a /login.
+      return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
+    }
+    ```
+
+---
+
+### Paso 5: Integración en el Enrutador Principal
+
+**Objetivo:** Conectar todos los componentes y páginas en el sistema de rutas de la aplicación.
+
+*   **Archivo:** `src/App.jsx`
+*   **Código:**
+    ```jsx
+    // src/App.jsx
+    import { Routes, Route } from "react-router-dom";
+    // ... otras importaciones
+    import { LoginPage } from "./components/login/LoginPage";
+    import { AdminPage } from "./pages/admin/AdminPage";
+    import { ProtectedRoute } from "./routes/ProtectedRoute";
+
+    function App() {
+      // ... Lógica de Redux
+      return (
+        <>
+          {/* ... Modal */}
+          <Routes>
+            {/* --- Rutas Públicas --- */}
+            <Route path="/" element={<MainHome />} />
+            <Route path="/login" element={<LoginPage />} />
+            {/* ... otras rutas públicas */}
+
+            {/* --- Rutas Protegidas --- */}
+            <Route element={<ProtectedRoute />}>
+              <Route path="/admin" element={<AdminPage />} />
+            </Route>
+
+            <Route path="*" element={<NoMath />} />
+          </Routes>
+        </>
+      );
+    }
+    export default App;
+    ```
+
+---
+
+### Paso 6: Configuración del Entorno de Desarrollo y Producción
+
+**Objetivo:** Solucionar los conflictos entre el entorno local y el de producción para tener un flujo de trabajo consistente.
+
+**Problema:**
+1.  **Local:** `npm run dev` no ejecuta las API de Vercel ni tiene acceso a las variables de entorno.
+2.  **Producción:** El enrutamiento de React (ej: `/login`) no funciona en un servidor estático, causando errores 404.
+3.  **Conflicto:** La solución para producción (`vercel.json`) causaba errores en el entorno de desarrollo local con `vercel dev`.
+
+**Solución (Flujo de Trabajo Manual Establecido):**
+
+**1. Para Desarrollo Local:**
+*   **Asegurarse de que `vercel.json` NO exista.**
+*   **Instalar Vercel CLI:** `npm install -g vercel`
+*   **Vincular el proyecto:** `vercel link`
+*   **Descargar variables de entorno:** `vercel env pull .env.development.local`
+*   **Iniciar el servidor con:** `vercel dev`
+
+**2. Para Desplegar a Producción:**
+*   **Crear/Restaurar el archivo `vercel.json`** en la raíz del proyecto antes de hacer `git push`.
+*   **Contenido de `vercel.json`:**
+    ```json
+    {
+      "rewrites": [
+        {
+          "source": "/:path((?!api/).*)",
+          "destination": "/index.html"
+        }
+      ]
+    }
+    ```
+*   **Subir los cambios a Git.** El despliegue de Vercel usará este archivo para configurar el enrutamiento correctamente. Después del push, el archivo puede ser eliminado localmente de nuevo para continuar el desarrollo.
