@@ -1,0 +1,13 @@
+@use '../../styles/variables' as * ;
+
+.containerAdminMenu { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-header,
+  &-categorias,
+  &-productos { 
+    border: 1px solid red;
+    width: 50%;
+  } 
+}

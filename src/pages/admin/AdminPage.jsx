@@ -10,29 +10,69 @@ import { IoIosExit } from "react-icons/io";
 
 
 import './adminPage.scss'
+import { useEffect, useState } from "react";
 
 
 const AdminPage = () => {
   
   const navigate = useNavigate();
+  const [currentDate, setCurretDate] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurretDate(new Date());
+    },1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatDate = (date) => { 
+    const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    const months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+    
+    const dayName = days[date.getDay()];
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+
+    return `${dayName}, ${day} de ${month}`;
+  };
+
+  const formatTime = (date) => {
+    let hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const period = hours >= 12 ? 'pm' : 'am';
+
+    //Convirtiendo a formato de doce horas
+    hours = hours  % 12;
+    hours = hours ? hours : 12; 
+
+    return `${hours}:${minutes} ${period}`;
+  };
 
   const handleLogout = () => { 
     sessionStorage.removeItem('isAdminAuthenticated');
     navigate('/login');
   };
 
+  const handleToMenu = () => {
+    navigate('/admin/menu');
+  }
+
   return(
     <>
       <section className="containerAdmin"> 
       <div className="containerAdmin-header">
-        <h1>¡ Bienvenido, Admin !</h1>
-        <h3>Lunes, 29 de septiembre</h3> 
-        <h4>10:00 am</h4>
-        <button onClick={handleLogout}> Cerrar Sesión </button>
+        <div className="containerAdmin-header-title">
+          <h1>¡ Bienvenido, Admin !</h1>
+        </div>
+        <div className="containerAdmin-header-data">
+          <h3>{formatDate(currentDate)}</h3> 
+          <h4>{formatTime(currentDate)}</h4>
+        </div>
       </div>
       <div className="containerAdmin-buttons">
         <ul>
-          <li> 
+          <li onClick={handleToMenu}> 
             <span> 
               <MdMenuBook />
             </span>
@@ -88,7 +128,7 @@ const AdminPage = () => {
               Recetas
             </p>
           </li>
-          <li> 
+          <li onClick={handleLogout}> 
             <span> 
               <IoIosExit />
             </span>

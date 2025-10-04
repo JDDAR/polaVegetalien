@@ -14,9 +14,29 @@
   }
 
   &-header{
-    h1{
-      
+    margin-top: 50px;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &-title{
+      h1{
+        font-size: 2rem;
+        color: $color-primary;
+        font-family: $font-family-text;
+      }
+    } 
+    &-data{
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 100;
+      }
+      h4 {
+        font-weight: 100;
+        color: $color-primary;
+      }
     }
+
   }
 
   &-buttons{
@@ -38,12 +58,13 @@
         align-items: center;
         justify-content: center;
         padding: 24px 16px;
-        background-color: #fff;
+        background-color: $color-BG-primary;
         border: 1px solid #e5e7eb;
         border-radius: 8px;
         cursor: pointer;
         transition: all 0.3s ease;
         min-height: 120px;
+        gap: 15px;
 
         &:hover {
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -54,7 +75,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #ec4899;
+          color: $color-primary;
           font-size: 32px;
           margin-bottom: 12px;
           transition: transform 0.3s ease;
@@ -69,7 +90,7 @@
           margin: 0;
           font-size: 12px;
           font-weight: 500;
-          color: #ec4899;
+          color: $color-font-primary;
           text-align: center;
           text-transform: uppercase;
           letter-spacing: 0.5px;
