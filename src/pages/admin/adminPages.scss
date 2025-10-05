@@ -7,31 +7,45 @@
   justify-content: space-between;
   align-items: center;
   padding: 25px;
+  background-color: rgba($color-primary, 0.1);
   
   &-header,
-  &-buttons{
-    width: 50%;
+  &-buttons,
+  &-summary {
+    height: 100%;
+    width: 60%;
   }
+
 
   &-header{
     margin-top: 50px;
     height: 25%;
     display: flex;
-    flex-direction: column;
     gap: 15px;
+    justify-content: space-between;
+
     &-title{
-      h1{
-        font-size: 2rem;
-        color: $color-primary;
+      h1 {
+        font-weight: 300;
+        font-size: 2.5rem;
         font-family: $font-family-text;
+        span {
+          color: $color-primary;
+        }
+      }
+      h3 {
+        font-size: 1rem;
+        font-weight: 100;
       }
     } 
     &-data{
+      text-align: end;
       h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 100;
       }
       h4 {
+        font-size: 1.5rem;
         font-weight: 100;
         color: $color-primary;
       }
@@ -40,31 +54,26 @@
   }
 
   &-buttons{
-    width: 50%;
-    padding: 20px;
-
     ul {
       list-style: none;
-      padding: 0;
       margin: 0;
       display: grid;
-      grid-template-columns: repeat(4, 1fr); 
+      grid-template-columns: repeat(2, 1fr); 
       gap: 16px;
       width: 100%;
 
       li {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 24px 16px;
+        align-items:center;
+        justify-content: start;
         background-color: $color-BG-primary;
         border: 1px solid #e5e7eb;
         border-radius: 8px;
         cursor: pointer;
         transition: all 0.3s ease;
-        min-height: 120px;
-        gap: 15px;
+        padding: 15px;
+        gap: 15px ;
+        
 
         &:hover {
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -75,11 +84,12 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          color: $color-primary;
+          color: $color-BG-primary;
           font-size: 32px;
-          margin-bottom: 12px;
           transition: transform 0.3s ease;
-
+          padding: 25px ;
+          background-image: $gradient-color-primary;
+          border-radius:6px;
           svg {
             width: 32px;
             height: 32px;
@@ -98,6 +108,20 @@
 
         &:hover span {
           transform: scale(1.1);
+        }
+        .info{
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          h2{
+            font-size: 1.2rem ;
+          }
+          p{
+            font-size: 0.8rem;
+            text-transform: lowercase;
+            color: $color-font-primary;
+            
+          }
         }
       }
     }
