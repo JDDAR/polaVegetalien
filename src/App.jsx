@@ -8,6 +8,7 @@ import NoMath from "./components/noMatches/NoMatch";
 import { LoginPage } from "./components/login/LoginPages";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AdminPage from "./pages/admin/AdminPage";
+import AdminMenuPage from "./pages/admin/AdminMenuPage";
 
 function App() {
   const { isOpen } = useSelector((store) => store.modalMenu);
@@ -23,6 +24,7 @@ function App() {
         <Route element={<ProtectedRoute/>}>
           {/* Si el usuario no está registrado se redirige a login */}
           <Route path="/admin" element={ <AdminPage />} />
+          <Route path="/admin/menu" element={<AdminMenuPage />} />
         </Route>
         <Route path="*" element={<NoMath />} />
       </Routes>
