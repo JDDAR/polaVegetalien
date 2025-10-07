@@ -9,6 +9,7 @@ import { LoginPage } from "./components/login/LoginPages";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AdminPage from "./pages/admin/AdminPage";
 import AdminMenuPage from "./pages/admin/AdminMenuPage";
+import GenericModal from "./components/modals/GenericModal";
 
 function App() {
   const { isOpen } = useSelector((store) => store.modalMenu);
@@ -27,7 +28,9 @@ function App() {
           <Route path="/admin/menu" element={<AdminMenuPage />} />
         </Route>
         <Route path="*" element={<NoMath />} />
+
       </Routes>
+      <GenericModal />
     </>
   );
 }

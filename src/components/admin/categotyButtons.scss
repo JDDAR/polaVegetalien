@@ -1,0 +1,165 @@
+@use '../../styles/variables' as *;
+
+.create-category-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  align-items: center;
+  h3{ 
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.create-category-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: $gradient-color-primary;
+  color: $color-BG-primary;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.938rem;
+  font-weight: 600;
+  font-family: $font-family-text;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba($color-primary, 0.25);
+  letter-spacing: 0.3px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($color-primary, 0.35);
+
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba($color-primary, 0.25);
+  }
+}
+
+.containerCategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+
+  &-message {
+    font-size: 0.875rem;
+    color: lighten($color-font-primary, 30%);
+    margin: 0;
+    padding: 8px 16px;
+
+    &.error {
+      color: #dc2626;
+    }
+  }
+
+  &-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: rgba($color-BG-primary, 0.9);
+    border: 1px solid rgba($color-primary, 0.1);
+    border-radius: 50px;
+    font-size: 0.938rem;
+    font-weight: 500;
+    color: $color-font-primary;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: $font-family-text;
+    
+    &:hover:not(.active) {
+      background-color: rgba($color-primary, 0.05);
+      border-color: rgba($color-primary, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($color-primary, 0.1);
+    }
+
+    // Categoría activa/seleccionada
+    &.active {
+      background: $gradient-color-primary;
+      color: $color-BG-primary;
+      border-color: transparent;
+      padding-right: 80px; // Espacio para los iconos
+      box-shadow: 0 8px 20px rgba($color-primary, 0.25);
+
+      &:hover {
+        box-shadow: 0 10px 30px rgba($color-primary, 0.3);
+        transform: translateY(-2px);
+      }
+    }
+
+    &-text {
+      white-space: nowrap;
+    }
+
+    // Contenedor de acciones (editar/eliminar)
+    &-actions {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      display: flex;
+      gap: 4px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+
+      // Solo mostrar cuando el botón está activo
+      .active & {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+        svg {
+          width: 14px;
+          height: 14px;
+          color: white;
+        }
+
+        &.edit {
+          background-color: #3b82f6;
+
+          &:hover {
+            background-color: #2563eb;
+            transform: scale(1.1);
+          }
+        }
+
+        &.delete {
+          background-color: #ef4444;
+
+          &:hover {
+            background-color: #dc2626;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

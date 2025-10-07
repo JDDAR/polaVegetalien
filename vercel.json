@@ -1,8 +1,8 @@
 {
-  "rewrites":[
+ "rewrites": [
     {
-      "source": "/:path((?!api/).*)",
-      "destination": "/index.html"
+      "source": "/api/categories.json",
+      "destination": "public/api/categories.json"
     }
   ]
 }
