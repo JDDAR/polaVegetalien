@@ -4,6 +4,9 @@ import carruselReducer from '../features/carousels/carouselsSlide';
 import ourWorkReducer from '../features/sections/ourWorkspaceSlice';
 import modalMenuReducer from '../features/modals/modalMenuSlice';
 import menuSpecificReducer from '../features/menuSpecific/menuSpecificSlice'
+import adminMenuReducer from "../features/adminMenu/adminMenuSlice";
+import modalReducer from "../features/modals/modalSlice"; 
+
 
 export const store = configureStore ({
   reducer: {
@@ -12,5 +15,7 @@ export const store = configureStore ({
     ourWorkSpaceData : ourWorkReducer,
     modalMenu: modalMenuReducer,
     menuSpecificData: menuSpecificReducer,
+    adminMenu : adminMenuReducer,
+    modal: modalReducer,
   }
 }); 

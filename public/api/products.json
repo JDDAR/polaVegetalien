@@ -1,0 +1,56 @@
+ [
+  {
+    "id": 101,
+    "name": "Éclair de Chocolate Intenso",
+    "price": 4.50,
+    "description": "Relleno de crema de chocolate belga y cubierto con un glaseado brillante.",
+    "stock": 15,
+    "categoryId": 1,
+    "isPublic": true
+   },
+   {
+    "id": 102,
+    "name": "Éclair de Vainilla y Frambuesa",
+    "price": 4.75,
+    "description": "Crema de vainilla de Tahití con un corazón de coulis de frambuesa.",
+    "stock": 12,
+    "categoryId": 1,
+    "isPublic": true
+   },
+   {
+    "id": 201,
+    "name": "Macaron de Pistacho",
+    "price": 2.00,
+    "description": "Ganache suave de pistacho iraní entre dos conchas crujientes.",
+    "stock": 30,
+    "categoryId": 2,
+    "isPublic": true
+   },
+   {
+    "id": 202,
+    "name": "Macaron de Frutos Rojos",
+    "price": 2.00,
+    "description": "Confitura casera de frutos rojos con un toque de licor de cassis.",
+    "stock": 25,
+    "categoryId": 2,
+    "isPublic": false
+   },
+   {
+    "id": 301,
+    "name": "Tarta de Limón y Merengue",
+    "price": 25.00,
+    "description": "Base sablée, crema de limón ácida y merengue italiano flameado.",
+    "stock": 5,
+    "categoryId": 3,
+    "isPublic": true
+   },
+   {
+    "id": 401,
+    "name": "Latte de Avena",
+    "price": 3.50,
+    "description": "Espresso doble con leche de avena vaporizada.",
+    "stock": 100,
+    "categoryId": 4,
+    "isPublic": true
+   }
+ ]
