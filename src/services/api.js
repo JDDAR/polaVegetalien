@@ -17,13 +17,6 @@ export const getCategories = () => {
    return apiClient.get('categories');
 };
 
-/**
-   * Obtiene la lista de todos los productos desde products.json.
-   * @returns {Promise} Una promesa de Axios con los datos de los productos.
-   */
-export const getProducts = () => {
-   return apiClient.get('products');
-};
 
 /**
   * @returns {Promise} Una promesa que se resuelve inmediatamente.
@@ -48,6 +41,25 @@ export const createCategory = ({ name }) => {
   return apiClient.post('categories', { name });
 };
 
+// --- PRODUCTS ---
+export const getProducts = () => {
+   return apiClient.get('products');
+};
 
+export const createProduct = (productData) => {
+ return apiClient.post('products', productData);
+};
+
+export const updateProduct = ({ id, ...productData }) => {
+  return apiClient.put(`products/${id}`, productData);
+};
+
+export const updateProductStatus = ({ id, isPublic }) => {
+   return apiClient.put(`products/${id}`, { isPublic });
+};
+
+export const deleteProduct = (productId) => {
+  return apiClient.delete(`products/${productId}`);
+};
 export default apiClient;
 

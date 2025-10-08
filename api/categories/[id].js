@@ -1,41 +1,32 @@
-import path from 'path';
-import { promises as fs } from 'fs';
+import { sql } from '@vercel/postgres';
 
 export default async function handler(req, res) {
-  // Obtenemos la ruta al archivo JSON
-  const jsonFilePath = path.join(process.cwd(), 'public', 'api', 'categories.json');
-  const { id } = req.query;
-  const categoryId = parseInt(id, 10);
+  const { id } = req.query; // Obtenemos el ID desde la URL
 
-  // --- LÓGICA PARA ACTUALIZAR (PUT) ---
+  // --- LÓGICA PARA ACTUALIZAR UNA CATEGORÍA (PUT) ---
   if (req.method === 'PUT') {
     try {
-      const { name: newName } = req.body; // Obtenemos el nuevo nombre del cuerpo de la petición
+      const { name } = req.body; // Obtenemos el nuevo nombre desde el cuerpo de la petición
 
-      if (!newName) {
+      if (!name || name.trim() === '') {
         return res.status(400).json({ message: 'El nombre es requerido.' });
       }
+      if (!id) {
+        return res.status(400).json({ message: 'El ID de la categoría es requerido.' });
+      }
 
-      const fileContents = await fs.readFile(jsonFilePath, 'utf8');
-      const categories = JSON.parse(fileContents);
+      // Actualiza la categoría en la base de datos y devuelve el registro actualizado
+      const { rows: [updatedCategory] } = await sql`
+        UPDATE categories
+        SET name = ${name.trim()}
+        WHERE id = ${id}
+        RETURNING *;
+      `;
 
-      let categoryUpdated = false;
-      const updatedCategories = categories.map(cat => {
-        if (cat.id === categoryId) {
-          categoryUpdated = true;
-          return { ...cat, name: newName }; // Actualizamos el nombre
-        }
-        return cat;
-      });
-
-      if (!categoryUpdated) {
+      if (!updatedCategory) {
         return res.status(404).json({ message: 'Categoría no encontrada.' });
       }
 
-      await fs.writeFile(jsonFilePath, JSON.stringify(updatedCategories, null, 2));
-
-      // Devolvemos solo la categoría que fue actualizada
-      const updatedCategory = updatedCategories.find(cat => cat.id === categoryId);
       return res.status(200).json(updatedCategory);
 
     } catch (error) {
@@ -44,38 +35,32 @@ export default async function handler(req, res) {
     }
   }
 
-  // --- LÓGICA PARA BORRAR (DELETE) ---
+  // --- LÓGICA PARA BORRAR UNA CATEGORÍA (DELETE) ---
   if (req.method === 'DELETE') {
     try {
-      // 1. Obtenemos el ID desde la URL (ej: /api/categories/5)
-      const { id } = req.query;
-      const categoryIdToDelete = parseInt(id, 10);
+      if (!id) {
+        return res.status(400).json({ message: 'El ID de la categoría es requerido.' });
+      }
 
-      // 2. Leemos el archivo actual
-      const fileContents = await fs.readFile(jsonFilePath, 'utf8');
-      const categories = JSON.parse(fileContents);
-
-      // 3. Filtramos el array para quitar la categoría con el ID correspondiente
-      const newCategories = categories.filter(cat => cat.id !== categoryIdToDelete);
-
-      // 4. Comprobamos si algo se eliminó realmente
-      if (categories.length === newCategories.length) {
+      // Borra la categoría de la base de datos
+      const result = await sql`
+        DELETE FROM categories
+        WHERE id = ${id};
+      `;
+      // `rowCount` nos dice cuántas filas fueron afectadas. Si es 0, no se encontró.
+      if (result.rowCount === 0) {
         return res.status(404).json({ message: 'Categoría no encontrada.' });
       }
 
-      // 5. Escribimos el nuevo array de vuelta al archivo
-      await fs.writeFile(jsonFilePath, JSON.stringify(newCategories, null, 2));
-
-     // 6. Enviamos una respuesta de éxito
-      return res.status(200).json({ message: `Categoría con ID ${categoryIdToDelete} eliminada.` });
+      return res.status(200).json({ message: 'Categoría eliminada exitosamente.' });
 
     } catch (error) {
       console.error(error);
       return res.status(500).json({ message: 'Error en el servidor al eliminar la categoría.' });
     }
   }
-  
-  // Si no es DELETE, devolvemos un error de método no permitido
+
+  // Si no es PUT o DELETE, devolvemos un error
   res.setHeader('Allow', ['PUT', 'DELETE']);
   return res.status(405).end(`Method ${req.method} Not Allowed`);
 }

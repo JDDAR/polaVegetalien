@@ -6,6 +6,7 @@ import modalMenuReducer from '../features/modals/modalMenuSlice';
 import menuSpecificReducer from '../features/menuSpecific/menuSpecificSlice'
 import adminMenuReducer from "../features/adminMenu/adminMenuSlice";
 import modalReducer from "../features/modals/modalSlice"; 
+import productsReducer from '../features/products/productsSlice';
 
 
 export const store = configureStore ({
@@ -17,5 +18,6 @@ export const store = configureStore ({
     menuSpecificData: menuSpecificReducer,
     adminMenu : adminMenuReducer,
     modal: modalReducer,
+    products: productsReducer,
   }
 }); 
