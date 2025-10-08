@@ -10,6 +10,7 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import AdminPage from "./pages/admin/AdminPage";
 import AdminMenuPage from "./pages/admin/AdminMenuPage";
 import GenericModal from "./components/modals/GenericModal";
+import MenuPage from "./pages/userPublic/MenuPage";
 
 function App() {
   const { isOpen } = useSelector((store) => store.modalMenu);
@@ -18,8 +19,11 @@ function App() {
       {isOpen && <ModalMenu />}
       <Routes>
         <Route path="/" element={<MainHome />} />
+        <Route path="/menu" element={<MenuPage />} />
         <Route path="/vegetalien/menu/:menuSpecific" element={<MenuSpecific />} />
+        
         <Route path="/login" element={<LoginPage /> } />
+
 
         {/* RUTAS PROTEGIDAS */}
         <Route element={<ProtectedRoute/>}>

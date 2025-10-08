@@ -5,6 +5,7 @@ import ourWorkReducer from '../features/sections/ourWorkspaceSlice';
 import modalMenuReducer from '../features/modals/modalMenuSlice';
 import menuSpecificReducer from '../features/menuSpecific/menuSpecificSlice'
 import adminMenuReducer from "../features/adminMenu/adminMenuSlice";
+import categoriesReducer from '../features/categories/categorySlice';
 import modalReducer from "../features/modals/modalSlice"; 
 import productsReducer from '../features/products/productsSlice';
 
@@ -19,5 +20,6 @@ export const store = configureStore ({
     adminMenu : adminMenuReducer,
     modal: modalReducer,
     products: productsReducer,
+    categories: categoriesReducer, 
   }
 }); 

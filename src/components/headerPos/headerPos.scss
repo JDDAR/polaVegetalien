@@ -16,10 +16,17 @@
     align-items: center;
     
     &-logo {
-      font-size: 2rem;
-      font-weight: 300;
-      font-family: $font-family-title;
-      color: $color-font-primary;
+      display: flex;
+      flex-direction:  column;
+      align-items: end;
+      h2{
+        font-family: $font-family-title;
+        font-weight: 300;
+        font-size: 2rem ; 
+     }
+      span{
+        font-size: 0.7rem;
+      }
     }
     
     &-buttons { 
