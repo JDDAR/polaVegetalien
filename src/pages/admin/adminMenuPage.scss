@@ -25,6 +25,65 @@
   &-categorias{ 
     margin-bottom: 35px;
   }
+}
 
+// ===== RESPONSIVE =====
 
+@media (max-width: 1024px) {
+  .containerAdminMenu {
+    &-title,
+    &-categorias,
+    &-productos {
+      width: 75%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .containerAdminMenu {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+    gap: 25px;
+
+    &-title,
+    &-categorias,
+    &-productos {
+      width: 90%;
+    }
+
+    &-title {
+      padding: 20px 0;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-categorias {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .containerAdminMenu {
+    &-title,
+    &-categorias,
+    &-productos {
+      width: 95%;
+    }
+
+    &-title {
+      padding: 16px 0;
+
+      h1 {
+        font-size: 1.25rem;
+      }
+    }
+
+    &-categorias {
+      margin-bottom: 20px;
+    }
+  }
 }
