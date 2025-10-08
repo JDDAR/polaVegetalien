@@ -1,0 +1,63 @@
+@use "../../../styles/variables.scss" as v;
+
+.public-product-list {
+  display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+
+  .no-products-message {
+    text-align: center;
+    grid-column: 1 / -1; // Ocupa todo el ancho de la grilla
+    font-size: 1.2rem;
+    color: #888;
+  }
+}
+
+.public-product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: v.$box-shadow-products;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+ .product-name {
+    font-family: v.$font-family-text;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+   }
+
+  .product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: v.$color-primary;
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,31 @@
+@use "../../../styles/variables" as v;
+
+.category-filters-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.category-filter-item {
+  padding: 0.6rem 1.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  user-select: none; // Evita que el texto se seleccione al hacer clic
+
+  &:hover {
+    background-color: lighten(v.$color-primary, 15%);
+    color: #fff;
+    border-color: lighten(v.$color-primary, 15%);
+  }
+  &.active {
+    background-color: v.$color-primary;
+    color: v.$color-BG-primary;
+    border-color: v.$color-primary;
+    font-weight: bold;
+  }
+}

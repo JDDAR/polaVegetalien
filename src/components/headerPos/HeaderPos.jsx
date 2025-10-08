@@ -22,7 +22,10 @@ const HeaderPos = () => {
     <>
       <div className="container-HeaderPos">
         <div className='container-HeaderPos-content'> 
-        <header className='container-HeaderPos-content-logo'>LeVegetarien</header>
+        <header className='container-HeaderPos-content-logo'>
+          <h2>Le végétalien</h2>
+          <span>au Pola</span>
+        </header>
         <div className='container-HeaderPos-content-buttons'>
           <p onClick={handleHome} role="button" ><span><RiHome3Line /></span>Home</p>
           <p onClick={handleLogout} role="button"><span><MdOutlineExitToApp /></span>Cerrar Sesión</p> 
