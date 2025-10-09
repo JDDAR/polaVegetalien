@@ -1,7 +1,7 @@
 import React from 'react';
 import './publicProductList.scss';
 
-const PublicProductList = ({ products, selectedCategory }) => {
+const PublicProductList = ({ products, selectedCategory, categories }) => {
 
   console.log('Productos recibidos por PublicProductList:', products);
   console.log('Categoría seleccionada:', selectedCategory);
@@ -31,17 +31,23 @@ const PublicProductList = ({ products, selectedCategory }) => {
         <p className="no-products-message">No hay productos disponibles en esta categoría.</p>
       ) : (
         // Si hay productos, los mapeamos y renderizamos
-        filteredProducts.map(product => (
+        filteredProducts.map(product => {
+          const category = categories.find(cat => cat.id === product.categoryId);
+
+          return (
           <div key={product.id} className="public-product-card">
-            <img src={product.image_url} alt={product.name} className="product-image" />
             <div className="product-info">
+              <div className='product-info-title'>
               <h3 className="product-name">{product.name}</h3>
+                {category && <p className="product-category">{category.name}</p>}
+              </div>
+
               <p className="product-description">{product.description}</p>
               <span className="product-price">${product.price}</span>
             </div>
           </div>
-         ))
-      )}
+         )}
+      ))}
    </div>
   );
 };
