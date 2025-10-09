@@ -6,6 +6,7 @@ import { fetchProductsAsync } from '../../features/products/productsSlice';
 import { fetchCategoriesAsync } from '../../features/categories/categorySlice';
 import CategoryFilters from '../../components/userPublic/categories/CategoryFilters';
 import PublicProductList from "../../components/userPublic/products/PublicProductList";
+import './menupages.scss';
 
 const MenuPage = () => { 
  
@@ -48,6 +49,7 @@ const MenuPage = () => {
 
         <PublicProductList 
           products = {products}
+          categories={categories}
           selectedCategory={selectedCategory}
         /> 
 
