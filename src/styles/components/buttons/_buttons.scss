@@ -1,0 +1,48 @@
+@use '../../variables' as *;
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: $gradient-color-primary;
+  color: $color-BG-primary;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.938rem;
+  font-weight: 600;
+  font-family: $font-family-text;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba($color-primary, 0.25);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($color-primary, 0.35);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba($color-primary, 0.25);
+  }
+}
+@mixin buttonPrimary {
+  text-decoration: none;
+  background: $color-primary;
+  border-radius: 6px;
+  color: $color-BG-primary;
+  text-align: center;
+}
+
+@mixin buttonSecondary {
+  text-decoration: none;
+  color: $color-primary;
+}

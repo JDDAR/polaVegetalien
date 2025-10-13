@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import "../../styles/components/products/productsMenu.scss";
 
 const ProductMenu = (props) => {
-  const { productsData } = useSelector((store) => store.productsData);
+    const { items: productsData } = useSelector((store) => store.productsData);
 
   const typeMenu = props.typeMenu;
 
