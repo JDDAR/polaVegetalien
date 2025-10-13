@@ -5,7 +5,7 @@ import "../../styles/components/modals/modalMenu.scss";
 
 import { GoPlusCircle } from "react-icons/go";
 const ModalMenu = () => {
-  const { productsData } = useSelector((store) => store.productsData);
+    const { items: productsData } = useSelector((store) => store.productsData);
   const dispath = useDispatch();
 
   return (
@@ -43,12 +43,9 @@ const ModalMenu = () => {
               </NavLink>
             </div>
             <NavLink to="Vegetalien/menu/macarons" className="menuHover">
-              <NavLink
-                to="Vegetalien/menu/macarons"
-                className="buttonMenuModal"
-              >
+              <div className="buttonMenuModal" >
                 <GoPlusCircle />
-              </NavLink>
+              </div>
             </NavLink>
           </article>
 
@@ -72,19 +69,12 @@ const ModalMenu = () => {
                   <ul key={type.id}>
                     <li>{type.title}</li>
                   </ul>
-                ))}{" "}
-              <NavLink
-                to="/Vegetalien/menu/pettit"
-                className="buttonMenuModal-responsive"
-              >
-                <GoPlusCircle />
-              </NavLink>
+                ))}
             </div>
             <NavLink to="Vegetalien/menu/pettit" className="menuHover">
-              <NavLink to="/Vegetalien/menu/pettit" className="buttonMenuModal">
-                {" "}
+              <div className="buttonMenuModal">
                 <GoPlusCircle />
-              </NavLink>
+              </div>
             </NavLink>
           </article>
 
@@ -107,19 +97,12 @@ const ModalMenu = () => {
                   <ul key={type.id}>
                     <li>{type.title}</li>
                   </ul>
-                ))}{" "}
-              <NavLink
-                to="/Vegetalien/menu/eclair"
-                className="buttonMenuModal-responsive"
-              >
-                <GoPlusCircle />
-              </NavLink>
+                ))}
             </div>
             <NavLink to="Vegetalien/menu/eclair" className="menuHover">
-              <NavLink to="/Vegetalien/menu/eclair" className="buttonMenuModal">
-                {" "}
+              <div className="buttonMenuModal">
                 <GoPlusCircle />
-              </NavLink>
+              </div>
             </NavLink>
           </article>
 
@@ -142,22 +125,12 @@ const ModalMenu = () => {
                   <ul key={type.id}>
                     <li>{type.title}</li>
                   </ul>
-                ))}{" "}
-              <NavLink
-                to="/Vegetalien/menu/boulangerie"
-                className="buttonMenuModal-responsive"
-              >
-                <GoPlusCircle />
-              </NavLink>
+                ))}
             </div>
-            <NavLink to="/Vegetalien/menu/boulangerie" className="menuHover">
-              <NavLink
-                to="/Vegetalien/menu/boulangerie"
-                className="buttonMenuModal"
-              >
-                {" "}
+            <NavLink to="Vegetalien/menu/boulangerie" className="menuHover">
+              <div className="buttonMenuModal">
                 <GoPlusCircle />
-              </NavLink>
+              </div>
             </NavLink>
           </article>
 
@@ -180,19 +153,12 @@ const ModalMenu = () => {
                   <ul key={type.id}>
                     <li>{type.title}</li>
                   </ul>
-                ))}{" "}
-              <NavLink
-                to="/Vegetalien/menu/tarts"
-                className="buttonMenuModal-responsive"
-              >
-                <GoPlusCircle />
-              </NavLink>
+                ))}
             </div>
-            <NavLink to="/Vegetalien/menu/tarts" className="menuHover">
-              <NavLink to="/Vegetalien/menu/tarts" className="buttonMenuModal">
-                {" "}
+            <NavLink to="Vegetalien/menu/tarts" className="menuHover">
+              <div className="buttonMenuModal">
                 <GoPlusCircle />
-              </NavLink>
+              </div>
             </NavLink>
           </article>
 
@@ -216,19 +182,12 @@ const ModalMenu = () => {
                   <ul key={type.id}>
                     <li>{type.title}</li>
                   </ul>
-                ))}{" "}
-              <NavLink
-                to="/Vegetalien/menu/drinks"
-                className="buttonMenuModal-responsive"
-              >
-                <GoPlusCircle />
-              </NavLink>
+                ))}
             </div>
             <NavLink to="/Vegetalien/menu/drinks" className="menuHover">
-              <NavLink to="/Vegetalien/menu/drinks" className="buttonMenuModal">
-                {" "}
+              <div className="buttonMenuModal">
                 <GoPlusCircle />
-              </NavLink>
+              </div>
             </NavLink>
           </article>
 
@@ -251,19 +210,12 @@ const ModalMenu = () => {
                   <ul key={type.id}>
                     <li>{type.title}</li>
                   </ul>
-                ))}{" "}
-              <NavLink
-                to="/Vegetalien/menu/cakes"
-                className="buttonMenuModal-responsive"
-              >
-                <GoPlusCircle />
-              </NavLink>
+                ))}
             </div>
             <NavLink to="/Vegetalien/menu/cakes" className="menuHover">
-              <NavLink to="/Vegetalien/menu/cakes" className="buttonMenuModal">
-                {" "}
+              <div className="buttonMenuModal">
                 <GoPlusCircle />
-              </NavLink>
+              </div>
             </NavLink>
           </article>
         </div>

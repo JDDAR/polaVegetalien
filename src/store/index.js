@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import productReducer from '../features/products/productsSlice';
+import productsDataReducer from '../features/products/productsDataSlice';
 import carruselReducer from '../features/carousels/carouselsSlide';
 import ourWorkReducer from '../features/sections/ourWorkspaceSlice';
 import modalMenuReducer from '../features/modals/modalMenuSlice';
@@ -12,7 +12,7 @@ import productsReducer from '../features/products/productsSlice';
 
 export const store = configureStore ({
   reducer: {
-    productsData: productReducer,
+    productsData: productsDataReducer,
     carrouselHome: carruselReducer,
     ourWorkSpaceData : ourWorkReducer,
     modalMenu: modalMenuReducer,
