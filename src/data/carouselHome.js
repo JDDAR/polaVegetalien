@@ -55,9 +55,7 @@ export const carrouselHome = [
     homeButton: "Descubrir Tarts",
   },
   {
-    id: 4,
-    imgURL: pettitHome,
-    homeTitle: "Pettit",
+    id: 7,
     homeDescription:
       "Tarts frescos y llenos de sabor, perfectos para un postre ligero.",
     homeButton: "Descubrir Tarts",
