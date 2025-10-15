@@ -5,10 +5,38 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 2rem 0;
+  margin: 1rem;
+  // Estilos para el desplazamiento en móvil
+  @media (max-width: 768px) {
+    position: relative;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    // Ocultar la barra de desplazamiento
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, and Opera */
+    }
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0; // Ajustado para cubrir toda la altura
+      width: 50px;
+      background: linear-gradient(to left, v.$color-BG-primary, transparent);
+      pointer-events: none; // Para que no interfiera con el clic
+    }
+  }
 }
 
 .category-filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.6rem 1.8rem;
   border: 1px solid #e0e0e0;
   border-radius: 25px;
