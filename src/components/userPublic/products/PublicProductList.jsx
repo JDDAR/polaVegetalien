@@ -6,13 +6,13 @@ const PublicProductList = ({ products, selectedCategory, categories }) => {
   console.log('Productos recibidos por PublicProductList:', products);
   console.log('Categoría seleccionada:', selectedCategory);
 
-  // 1. LÓGICA DE FILTRADO
+  // LÓGICA DE FILTRADO
   const filteredProducts = products.filter(product => {
     // Condición 1: El producto debe estar publicado.
     const isPublished = product.isPublic === true;
 
     // Condición 2: El producto debe pertenecer a la categoría seleccionada.
-         // Si la categoría es 'todos', esta condición siempre es verdadera.
+    // Si la categoría es 'todos', esta condición siempre es verdadera.
     const inSelectedCategory = selectedCategory === 'todos' || product.categoryId === selectedCategory;
 
     console.log(
@@ -23,8 +23,9 @@ const PublicProductList = ({ products, selectedCategory, categories }) => {
     return isPublished && inSelectedCategory;
   });
 
-  // 2. LÓGICA DE RENDERIZADO
+  // LÓGICA DE RENDERIZADO
   return (
+    <>
     <div className="public-product-list">
       {/* Si después de filtrar no hay productos, muestra un mensaje */}
       {filteredProducts.length === 0 ? (
@@ -49,6 +50,7 @@ const PublicProductList = ({ products, selectedCategory, categories }) => {
          )}
       ))}
    </div>
+   </>
   );
 };
 export default PublicProductList;

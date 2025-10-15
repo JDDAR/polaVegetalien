@@ -1,0 +1,25 @@
+@use '../../../styles/_variables.scss' as *;
+
+.header-container{
+  background-color: $color-primary;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-BG-primary;
+  padding: 15px;
+
+
+  &-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items :end;
+    line-height: 35px;
+    h2 {
+      font-family: $font-family-title;
+      font-size: 3.5rem;
+      font-weight: 100;
+    }
+  }
+}
