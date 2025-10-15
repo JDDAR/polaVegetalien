@@ -6,7 +6,13 @@ import { fetchProductsAsync } from '../../features/products/productsSlice';
 import { fetchCategoriesAsync } from '../../features/categories/categorySlice';
 import CategoryFilters from '../../components/userPublic/categories/CategoryFilters';
 import PublicProductList from "../../components/userPublic/products/PublicProductList";
+import HeaderMenuPublic from "../../components/userPublic/headerPublicMenu/HeaderMenuPublic";
+
+import { SiCodechef } from "react-icons/si";
+
+
 import './menupages.scss';
+
 
 const MenuPage = () => { 
  
@@ -33,20 +39,23 @@ const MenuPage = () => {
   }, [dispatch]);
 
   if (productStatus === 'loading' || categoryStatus === 'loading') {
-    return <div>Cargando menú ...</div>;
+    return <div className="loading">
+       <h1> <span> <SiCodechef />  </span>Cargando menú ... </h1>
+    </div>;
   }
 
   return( 
     <>
       <div className="menu-page-container">
-        <h1>Menu Principal</h1>
-
+        <HeaderMenuPublic />
+        <div className="menu-page-container-titleSection">
+          <h1 className="title-section" >Menu Principal</h1>
+        </div>
         <CategoryFilters
           categories={categories}
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
         />
-
         <PublicProductList 
           products = {products}
           categories={categories}

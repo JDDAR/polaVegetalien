@@ -1,6 +1,13 @@
 @use '../../styles/variables' as *;
 
-.menu-page-container{ 
-    padding: 25px 0;
-    h1 { text-align: center;}
+
+.menu-page-container-titleSection {
+  display: flex;
+  aling-items: center;
+  justify-content: center;
+  padding: 30px;
+
+  .title-section{ 
+    color: $color-primary;
+  }
 }
